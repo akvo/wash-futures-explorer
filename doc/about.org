@@ -353,4 +353,12 @@ Full Access Scenario and Business as Usual + UNIT
 - Population, csv #13, csv #17 [2019 - 2050] *THIS IS THE DIFFERENCE FOR THE GRAPH*
 - Others [2030 and 2050]
 
-* Filters
+* Classifications
+
+** Abbreviations
+- FS = Full Sanitation Access
+- FW = Full Water Access
+- FWS = Full Water and Sanitation Access
+- SI = Sanitation Increased
+- WI = Water Increased
+- WSI = Water and Sanitation Increased
