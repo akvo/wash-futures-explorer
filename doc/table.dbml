@@ -3,7 +3,7 @@ Table table_ifs {
   country_id int [ref: > countries.id]    // Relationship to countries table
   unit_id int [ref: > units.id]           // Relationship to units table
   jmp_category_id int [ref: > jmp_categories.id] // Relationship to jmp_categories table
-	jmp_name_id int [ref: > jmp_name.id] // Relationship to jmp_name table
+	jmp_name_id int [ref: > jmp_names.id] // Relationship to jmp_names table
   value_name_id int [ref: > value_names.id] // Relationship to value_names table
   commitment_id int [ref: > commitments.id] // Relationship to commitments table
   year int
