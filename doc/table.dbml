@@ -1,9 +1,20 @@
-Table data_values {
+Table table_ifs {
   indicator_id int [ref: > indicators.id] // Relationship to indicators table
   country_id int [ref: > countries.id]    // Relationship to countries table
   unit_id int [ref: > units.id]           // Relationship to units table
-  value_name_id int [ref: > value_names.id] // Relationship to value_names table
   jmp_category_id int [ref: > jmp_categories.id] // Relationship to jmp_categories table
+	jmp_name_id int [ref: > jmp_name.id] // Relationship to jmp_name table
+  value_name_id int [ref: > value_names.id] // Relationship to value_names table
+  commitment_id int [ref: > commitments.id] // Relationship to commitments table
+  year int
+  value decimal
+}
+
+Table table_jmp {
+  country_id int [ref: > countries.id]    // Relationship to countries table
+  jmp_category_id int [ref: > jmp_categories.id] // Relationship to jmp_categories table
+	jmp_name_id int [ref: > jmp_names.id] // Relationship to jmp_names table
+  value_type_id int [ref: > value_types.id] // Relationship to value_types table
   commitment_id int [ref: > commitments.id] // Relationship to commitments table
   year int
   value decimal
@@ -11,30 +22,41 @@ Table data_values {
 
 Table indicators {
   id int [pk]
-  name varchar
+  indicator varchar
 }
 
 Table countries {
   id int [pk]
-  name varchar
+  country varchar
 }
 
 Table units {
   id int [pk]
-  name varchar
-}
-
-Table value_names {
-  id int [pk]
-  name varchar
-}
-
-Table jmp_categories {
-  id int [pk]
-  name varchar
+  unit varchar
 }
 
 Table commitments {
   id int [pk]
-  name varchar
+  commitment varchar
 }
+
+Table jmp_categories {
+  id int [pk]
+  jmp_category varchar
+}
+
+Table jmp_names {
+  id int [pk]
+  jmp_name varchar
+}
+
+Table value_names {
+  id int [pk]
+  value_name varchar
+}
+
+Table value_types {
+  id int [pk]
+  value_type varchar
+}
+
