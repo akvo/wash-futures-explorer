@@ -23,7 +23,6 @@ return f"return tabulate({df}, headers={df}.columns, tablefmt='orgtbl')"
 #+end_src
 
 * Input Files
-
 ** List of Scripts
 
 #+name: List of scripts
@@ -122,7 +121,6 @@ find ../ -type f -name "conversion*"
 ../input data/conversion_table_indicators.csv
 :end:
 
-
 ** Scan All the functions
 
 #+name: Scan all the functions
@@ -187,9 +185,7 @@ Years to Keep:
 - Population, csv #13, csv #17 [2019 - 2050]
 - Others [2030 and 2050]
 
-
 * Output Files
-
 ** Scan All Output Files Produced by The Scripts
 
 *** Output Files from JMP_Script.py
@@ -309,11 +305,8 @@ cat ../Python\ scripts/main.py | grep -e to_csv
 
 Nothing
 
-
 * Pages
-
 ** Business As Usual Scenario
-
 *** First Rows uses:
 - Both Boxes uses: JMP.csv
 *** Second Rows uses:
@@ -322,7 +315,6 @@ Nothing
 - Third Box: YearFull_access.csv
 
 ** Full WASH Access By 2030 or 2050
-
 *** Data To Use:
 **** First Row: progressRates_abs.csv
 ***** progressRates_abs.csv
@@ -353,8 +345,7 @@ Full Access Scenario and Business as Usual + UNIT
 - Population, csv #13, csv #17 [2019 - 2050] *THIS IS THE DIFFERENCE FOR THE GRAPH*
 - Others [2030 and 2050]
 
-* Classifications
-
+* Other
 ** Abbreviations
 - FS = Full Sanitation Access
 - FW = Full Water Access

@@ -1,0 +1,70 @@
+[
+    {
+        "file_name": "01. Deaths by Category of Cause - Millions (2nd Dimensions = Diarrhea).csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "11. Governance Effectiveness - WB index.csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "12. Value Added by Sector, Currency - Billion dollars.csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "13. Sanitation Services, Access, percent of population (2nd Dimensions = Basic + Safely Managed).csv",
+        "years": {
+            "range": [2019, 2050]
+        }
+    },
+    {
+        "file_name": "14. Sanitation Services, Access, Number of people, million (2nd Dimensions = Basic + Safely Managed).csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "15. Sanitation Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic + Safely Managed).csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "16. Sanitation Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic + Safely Managed).csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "17. Water Services, Access, percent of population (2nd Dimension = Basic + Safely Managed).csv",
+        "years": {
+            "range": [2019, 2050]
+        }
+    },
+    {
+        "file_name": "18. Water Services, Access, Number of people, million (2nd Dimensions = Basic + Safely Managed).csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "19. Water Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic + Safely Managed).csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "20. Water Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic + Safely Managed).csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "21. Population - Millions.csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "23. GDP (PPP) - Billion dollars.csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "24. Stunted children, History and Forecast - Million.csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "25. Population under 5 Years, Headcount - Millions.csv",
+        "years": [2030, 2050]
+    },
+    {
+        "file_name": "26. Malnourished Children, Headcount - Millions.csv",
+        "years": [2030, 2050]
+    }
+]
