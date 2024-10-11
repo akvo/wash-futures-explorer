@@ -13,10 +13,3 @@ author = 'Deden Bangkit'
 # directories to ignore when looking for source files.
 # These patterns also affect html_static_path and html_extra_path
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
-# -- Options for HTML output ----------------------------------------------
-
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
-html_theme = 'alabaster'
