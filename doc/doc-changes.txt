@@ -1,38 +1,64 @@
 [Changes] 11 October 2024
- delete mode 100755 input_data/IFs/01. Deaths by Category of Cause - Millions.csv
- delete mode 100644 input_data/IFs/02. Education Years, Mean, 15 to 24 Age Group - Years of Education.csv
- delete mode 100755 input_data/IFs/03. GDP per Capita (PPP) - Thousand Dollars.csv
- delete mode 100755 input_data/IFs/04. Infrastructure Spending by Destination, Total, Currency - Billion Dollars.csv
- delete mode 100755 input_data/IFs/05. Malnourished Children - Percent of children.csv
- delete mode 100755 input_data/IFs/06. Poverty less than $1.90 per Day, Log Normal - Percent of population.csv
- delete mode 100755 input_data/IFs/07. SAM National Burden, Total Cases - Millions.csv
- delete mode 100755 input_data/IFs/09. Stunting Rate of Children - Percent of age 0-5.csv
- delete mode 100644 input_data/IFs/10. DALYs per Capita - Million per million (2nd Dimensions = Malaria).csv
- delete mode 100755 input_data/IFs/12. Value Added by Sector, Currency - Billion dollars.csv
- create mode 100644 input_data/IFs/13. Sanitation Services, Access, Percent of Population, At Least Basic.csv
- delete mode 100644 input_data/IFs/13. Sanitation Services, Access, percent of population (2nd Dimensions = Basic + Safely Managed).csv
- create mode 100644 input_data/IFs/13. Sanitation Services, Access, percent of population (2nd Dimensions = Safely Managed).csv
- delete mode 100644 input_data/IFs/14. Sanitation Services, Access, Number of people, million (2nd Dimensions = Basic + Safely Managed).csv
- create mode 100644 input_data/IFs/14. Sanitation Services, Access, Number of people, million (2nd Dimensions = Basic).csv
- create mode 100644 input_data/IFs/14. Sanitation Services, Access, Number of people, million (2nd Dimensions = SafelyManaged).csv
- delete mode 100644 input_data/IFs/15. Sanitation Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic + Safely Managed).csv
- create mode 100644 input_data/IFs/15. Sanitation Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic).csv
- create mode 100644 input_data/IFs/15. Sanitation Services, Expenditure, Capital, Billion $ (2nd Dimensions = SafelyManaged).csv
- delete mode 100644 input_data/IFs/16. Sanitation Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic + Safely Managed).csv
- create mode 100644 input_data/IFs/16. Sanitation Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic).csv
- create mode 100644 input_data/IFs/16. Sanitation Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = SafelyManaged).csv
- create mode 100644 input_data/IFs/17. Water Services, Access, Percent of Population, At Least Basic.csv
- delete mode 100644 input_data/IFs/17. Water Services, Access, percent of population (2nd Dimension = Basic + Safely Managed).csv
- create mode 100644 input_data/IFs/17. Water Services, Access, percent of population (2nd Dimension = Safely Managed).csv
- delete mode 100644 input_data/IFs/18. Water Services, Access, Number of people, million (2nd Dimensions = Basic + Safely Managed).csv
- create mode 100644 input_data/IFs/18. Water Services, Access, Number of people, million (2nd Dimensions = Basic).csv
- create mode 100644 input_data/IFs/18. Water Services, Access, Number of people, million (2nd Dimensions = SafelyManaged).csv
- delete mode 100644 input_data/IFs/19. Water Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic + Safely Managed).csv
- create mode 100644 input_data/IFs/19. Water Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic).csv
- create mode 100644 input_data/IFs/19. Water Services, Expenditure, Capital, Billion $ (2nd Dimensions = SafelyManaged).csv
- delete mode 100644 input_data/IFs/20. Water Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic + Safely Managed).csv
- create mode 100644 input_data/IFs/20. Water Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic).csv
- create mode 100644 input_data/IFs/20. Water Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = SafelyManaged).csv
- delete mode 100644 input_data/IFs/21. Population - Millions.csv
- delete mode 100644 input_data/IFs/22. GDP (MER) - Billion dollars.csv
- delete mode 100644 input_data/IFs/25. Population under 5 Years, Headcount - Millions.csv
+ 11 Oct - delete mode 100755 input_data/IFs/01. Deaths by Category of Cause - Millions.csv
+ 11 Oct - delete mode 100644 input_data/IFs/02. Education Years, Mean, 15 to 24 Age Group - Years of Education.csv
+ 11 Oct - delete mode 100755 input_data/IFs/03. GDP per Capita (PPP) - Thousand Dollars.csv
+ 11 Oct - delete mode 100755 input_data/IFs/04. Infrastructure Spending by Destination, Total, Currency - Billion Dollars.csv
+ 11 Oct - delete mode 100755 input_data/IFs/05. Malnourished Children - Percent of children.csv
+ 11 Oct - delete mode 100755 input_data/IFs/06. Poverty less than $1.90 per Day, Log Normal - Percent of population.csv
+ 11 Oct - delete mode 100755 input_data/IFs/07. SAM National Burden, Total Cases - Millions.csv
+ 11 Oct - delete mode 100755 input_data/IFs/09. Stunting Rate of Children - Percent of age 0-5.csv
+ 11 Oct - delete mode 100644 input_data/IFs/10. DALYs per Capita - Million per million (2nd Dimensions = Malaria).csv
+ 11 Oct - delete mode 100755 input_data/IFs/12. Value Added by Sector, Currency - Billion dollars.csv
+ 11 Oct - create mode 100644 input_data/IFs/13. Sanitation Services, Access, Percent of Population, At Least Basic.csv
+ 11 Oct - delete mode 100644 input_data/IFs/13. Sanitation Services, Access, percent of population (2nd Dimensions = Basic + Safely Managed).csv
+ 11 Oct - create mode 100644 input_data/IFs/13. Sanitation Services, Access, percent of population (2nd Dimensions = Safely Managed).csv
+ 11 Oct - delete mode 100644 input_data/IFs/14. Sanitation Services, Access, Number of people, million (2nd Dimensions = Basic + Safely Managed).csv
+ 11 Oct - create mode 100644 input_data/IFs/14. Sanitation Services, Access, Number of people, million (2nd Dimensions = Basic).csv
+ 11 Oct - create mode 100644 input_data/IFs/14. Sanitation Services, Access, Number of people, million (2nd Dimensions = SafelyManaged).csv
+ 11 Oct - delete mode 100644 input_data/IFs/15. Sanitation Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic + Safely Managed).csv
+ 11 Oct - create mode 100644 input_data/IFs/15. Sanitation Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic).csv
+ 11 Oct - create mode 100644 input_data/IFs/15. Sanitation Services, Expenditure, Capital, Billion $ (2nd Dimensions = SafelyManaged).csv
+ 11 Oct - delete mode 100644 input_data/IFs/16. Sanitation Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic + Safely Managed).csv
+ 11 Oct - create mode 100644 input_data/IFs/16. Sanitation Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic).csv
+ 11 Oct - create mode 100644 input_data/IFs/16. Sanitation Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = SafelyManaged).csv
+ 11 Oct - create mode 100644 input_data/IFs/17. Water Services, Access, Percent of Population, At Least Basic.csv
+ 11 Oct - delete mode 100644 input_data/IFs/17. Water Services, Access, percent of population (2nd Dimension = Basic + Safely Managed).csv
+ 11 Oct - create mode 100644 input_data/IFs/17. Water Services, Access, percent of population (2nd Dimension = Safely Managed).csv
+ 11 Oct - delete mode 100644 input_data/IFs/18. Water Services, Access, Number of people, million (2nd Dimensions = Basic + Safely Managed).csv
+ 11 Oct - create mode 100644 input_data/IFs/18. Water Services, Access, Number of people, million (2nd Dimensions = Basic).csv
+ 11 Oct - create mode 100644 input_data/IFs/18. Water Services, Access, Number of people, million (2nd Dimensions = SafelyManaged).csv
+ 11 Oct - delete mode 100644 input_data/IFs/19. Water Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic + Safely Managed).csv
+ 11 Oct - create mode 100644 input_data/IFs/19. Water Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic).csv
+ 11 Oct - create mode 100644 input_data/IFs/19. Water Services, Expenditure, Capital, Billion $ (2nd Dimensions = SafelyManaged).csv
+ 11 Oct - delete mode 100644 input_data/IFs/20. Water Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic + Safely Managed).csv
+ 11 Oct - create mode 100644 input_data/IFs/20. Water Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic).csv
+ 11 Oct - create mode 100644 input_data/IFs/20. Water Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = SafelyManaged).csv
+ 11 Oct - delete mode 100644 input_data/IFs/21. Population - Millions.csv
+ 11 Oct - delete mode 100644 input_data/IFs/22. GDP (MER) - Billion dollars.csv
+ 11 Oct - delete mode 100644 input_data/IFs/25. Population under 5 Years, Headcount - Millions.csv
+
+[Changes] 17 October 2024
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/13. Sanitation Services, Access, percent of population (2nd Dimensions = At Least Basic).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/13. Sanitation Services, Access, percent of population (2nd Dimensions = Safely Managed).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/14. Sanitation Services, Access, Number of people, million (2nd Dimensions = Basic).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/14. Sanitation Services, Access, Number of people, million (2nd Dimensions = SafelyManaged).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/15. Sanitation Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/15. Sanitation Services, Expenditure, Capital, Billion $ (2nd Dimensions = SafelyManaged).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/16. Sanitation Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/16. Sanitation Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = SafelyManaged).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/17. Water Services, Access, percent of population (2nd Dimensions = At Least Basic).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/17. Water Services, Access, percent of population (2nd Dimensions = Safely Managed).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/18. Water Services, Access, Number of people, million (2nd Dimensions = Basic).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/18. Water Services, Access, Number of people, million (2nd Dimensions = SafelyManaged).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/19. Water Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/19. Water Services, Expenditure, Capital, Billion $ (2nd Dimensions = SafelyManaged).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/20. Water Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic).csv (100%)
+ 17 Oct - rename input_data/{IFs => IFs TESTING}/20. Water Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = SafelyManaged).csv (100%)
+ 17 Oct - create mode 100644 input_data/IFs/13. Sanitation Services, Access, percent of population (2nd Dimensions = Basic + Safely Managed).csv
+ 17 Oct - create mode 100644 input_data/IFs/14. Sanitation Services, Access, Number of people, million (2nd Dimensions = Basic + Safely Managed).csv
+ 17 Oct - create mode 100644 input_data/IFs/15. Sanitation Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic + Safely Managed).csv
+ 17 Oct - create mode 100644 input_data/IFs/16. Sanitation Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic + Safely Managed).csv
+ 17 Oct - create mode 100644 input_data/IFs/17. Water Services, Access, percent of population (2nd Dimensions = Basic + Safely Managed).csv
+ 17 Oct - create mode 100644 input_data/IFs/18. Water Services, Access, Number of people, million (2nd Dimensions = Basic + Safely Managed).csv
+ 17 Oct - create mode 100644 input_data/IFs/19. Water Services, Expenditure, Capital, Billion $ (2nd Dimensions = Basic + Safely Managed).csv
+ 17 Oct - create mode 100644 input_data/IFs/20. Water Services, Expenditure, Maintenance, Billion $ (2nd Dimensions = Basic + Safely Managed).csv
