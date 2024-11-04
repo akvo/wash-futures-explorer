@@ -43,7 +43,8 @@ Git Repository and Git LFS Configuration
 
 The USAID-Tool-1 project is managed using Git, with Git Large File Storage (Git LFS) to handle large data files efficiently. Git LFS is particularly useful for tracking and storing files that exceed Git's regular size limits, ensuring that large files (such as CSV, XLSX, and PBIX) are accessible without slowing down the repository.
 
-### Git LFS Configuration
+Git LFS Configuration
+---------------------
 
 The following `.gitattributes` configuration is used to track large files in the repository. This configuration ensures that specific file types are managed by Git LFS instead of being stored directly in the Git repository:
 
@@ -53,7 +54,8 @@ The following `.gitattributes` configuration is used to track large files in the
     *.xlsx filter=lfs diff=lfs merge=lfs -text
     *.pbix filter=lfs diff=lfs merge=lfs -text
 
-### Benefits of Git LFS for USAID-Tool-1
+Benefits of Git LFS for USAID-Tool-1
+------------------------------------
 
 Using Git LFS allows us to:
 - Track large data files (such as CSV, Excel, and PowerBI files) efficiently.
