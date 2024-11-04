@@ -7,7 +7,7 @@ Overview
 
 The data for **USAID-Tool-1** is sourced from the **International Futures (IFs)** model, a free and open-source quantitative tool designed to help users think systematically about long-term global futures. Developed by the Frederick S. Pardee Center for International Futures, IFs is used by policymakers, researchers, and students worldwide to explore potential global trends, development goals, and targets. The IFs model offers insights into various indicators, including those relevant to water, sanitation, and hygiene (WASH) initiatives.
 
-For more information about the IFs model, visit the [Pardee Wiki page](https://korbel.du.edu/pardee/content/download-ifs).
+For more information about the IFs model, visit the `Pardee Wiki page <https://korbel.du.edu/pardee/content/download-ifs>`_.
 
 .. image:: https://korbel.du.edu/sites/default/files/IFsOverviewChart.jpg
    :alt: International Futures (IFs) Overview Chart
@@ -18,7 +18,7 @@ Data Download
 
 To download the IFs model data, follow these steps:
 
-1. Visit [this link](https://korbel.du.edu/pardee/content/download-ifs) and download the data installer package for Windows: [IFs with Pardee 8.28 (July 2022)](https://ifs02.du.edu/IFs%20with%20Pardee%208_28%20July%2022%202024.zip).
+1. Visit `this link <https://korbel.du.edu/pardee/content/download-ifs>`_ and download the data installer package for Windows: `IFs with Pardee 8.28 (July 2022) <https://ifs02.du.edu/IFs%20with%20Pardee%208_28%20July%2022%202024.zip>`_.
 2. Extract the package and install the IFs model on a Windows machine.
 3. Navigate to the data export options within the IFs tool to export relevant datasets.
 
