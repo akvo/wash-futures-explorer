@@ -9,6 +9,9 @@ The data transformation for **USAID-Tool-1** is performed within a Jupyter Noteb
 
 Required libraries are listed in the `requirements.txt` file in the `src` folder.
 
+Transformation Steps
+====================
+
 .. toctree::
    :maxdepth: 2
    :caption: Transformation Steps
