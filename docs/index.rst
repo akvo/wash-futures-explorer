@@ -27,7 +27,6 @@ Contents
 
 .. toctree::
    :maxdepth: 3
-   :caption: Sections
 
    overview
    data_input

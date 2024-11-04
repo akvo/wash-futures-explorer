@@ -14,7 +14,6 @@ Transformation Steps
 
 .. toctree::
    :maxdepth: 2
-   :caption: Transformation Steps
 
    1_code_preparation
    2_code_ifs_dataset
