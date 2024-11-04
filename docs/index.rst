@@ -11,16 +11,6 @@ USAID-Tool-1 Documentation
 
 This documentation will guide you through the various components of USAID-Tool-1, including data input, transformation processes, and data visualization. Follow the links below to explore each section in detail.
 
-Contents
-========
-
-.. toctree::
-   :maxdepth: 3
-   :caption: Sections
-
-   overview
-   data_input
-   data_transformation
 
 Getting Started
 ===============
@@ -31,6 +21,17 @@ To get started with USAID-Tool-1, follow these steps:
 2. **Input Data**: Load the required data files as described in `data_input.rst`.
 3. **Run Data Transformations**: Process the data using Python scripts, following the instructions in `data_transformation.rst`.
 4. **Visualize in PowerBI**: Import the transformed data into PowerBI for visualization, as outlined in `data_visualization.rst`.
+
+Contents
+========
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Sections
+
+   overview
+   data_input
+   data_transformation
 
 About this Documentation
 ========================
