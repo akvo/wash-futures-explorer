@@ -1,3 +1,4 @@
+from pickle import TRUE
 import sphinx_rtd_theme
 
 # General configuration ------------------------------------------------
@@ -17,7 +18,7 @@ extensions = [
 
 templates_path = ["_templates"]
 epub_show_urls = "footnote"
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+exclude_patterns = ["Thumbs.db", ".DS_Store"]
 html_theme = "sphinx_rtd_theme"
 
 
