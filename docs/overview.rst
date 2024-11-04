@@ -38,6 +38,37 @@ System Requirements
 - **Jupyter Notebook**: For running data transformation scripts in an interactive environment.
 - **PowerBI**: PowerBI Desktop or a compatible version for data visualization.
 
+Git Repository and Git LFS Configuration
+========================================
+
+The USAID-Tool-1 project is managed using Git, with Git Large File Storage (Git LFS) to handle large data files efficiently. Git LFS is particularly useful for tracking and storing files that exceed Git's regular size limits, ensuring that large files (such as CSV, XLSX, and PBIX) are accessible without slowing down the repository.
+
+### Git LFS Configuration
+
+The following `.gitattributes` configuration is used to track large files in the repository. This configuration ensures that specific file types are managed by Git LFS instead of being stored directly in the Git repository:
+
+.. code-block:: text
+
+    *.csv filter=lfs diff=lfs merge=lfs -text
+    *.xlsx filter=lfs diff=lfs merge=lfs -text
+    *.pbix filter=lfs diff=lfs merge=lfs -text
+
+### Benefits of Git LFS for USAID-Tool-1
+
+Using Git LFS allows us to:
+- Track large data files (such as CSV, Excel, and PowerBI files) efficiently.
+- Improve repository performance by keeping large files out of the main Git history.
+- Facilitate data updates and sharing within the project, as large files are versioned and stored externally.
+
+To clone the repository with Git LFS, ensure Git LFS is installed on your system. Once installed, run:
+
+.. code-block:: bash
+
+    git lfs install
+    git clone <repository-url>
+
+After cloning, the large files will be downloaded as needed when you check out specific branches or commits.
+
 ---
 
 For more detailed information, refer to the individual sections on data input, transformation, and visualization. This overview provides a foundation for understanding the purpose, objectives, and methodology of USAID-Tool-1.

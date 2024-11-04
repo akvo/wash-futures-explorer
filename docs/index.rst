@@ -1,8 +1,3 @@
-.. USAID Tool-1 documentation master file, created by
-   sphinx-quickstart on Wed May 25 01:39:41 2024.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 ===========================
 USAID-Tool-1 Documentation
 ===========================
@@ -11,6 +6,7 @@ USAID-Tool-1 Documentation
 
 This documentation will guide you through the various components of USAID-Tool-1, including data input, transformation processes, and data visualization. Follow the links below to explore each section in detail.
 
+---
 
 Getting Started
 ===============
@@ -22,6 +18,8 @@ To get started with USAID-Tool-1, follow these steps:
 3. **Run Data Transformations**: Process the data using Python scripts, following the instructions in `data_transformation.rst`.
 4. **Visualize in PowerBI**: Import the transformed data into PowerBI for visualization, as outlined in `data_visualization.rst`.
 
+---
+
 Contents
 ========
 
@@ -31,11 +29,17 @@ Contents
    overview
    data_input
    data_transformation
+   data_output
+   data_visualization
+
+---
 
 About this Documentation
 ========================
 
 This documentation is structured to help both technical and non-technical users understand and utilize USAID-Tool-1 effectively. Each section contains detailed explanations, code snippets, and examples for ease of use.
+
+---
 
 Feedback
 ========
