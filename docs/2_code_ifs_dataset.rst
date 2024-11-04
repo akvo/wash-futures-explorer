@@ -573,3 +573,181 @@ This additional commitment key table ensures consistency in legends and provides
 ---
 
 This section completes the processing of the IFs dataset, producing final tables for analysis and visualization and establishing consistent mappings and keys for attributes across the data.
+
+
+2.E. Progress Rates
+===================
+
+The **Progress Rates** section processes IFs data to calculate the yearly increase in WASH indicators, evaluate progress towards full services, and filter data to create a final table of progress rates. This section includes functions for calculating adjustments, creating collections, applying year filters, and saving the final results.
+
+---
+
+2.E.1 Progress Rates Functions
+------------------------------
+
+The `get_alb_value_for_progress_rates` function calculates adjusted values for indicators categorized as "ALB" by adding corresponding "SM" values when available.
+
+**Code**
+
+.. code-block:: python
+
+    def get_alb_value_for_progress_rates(x, dataframe):
+        if x["jmp_category"] == "ALB":
+            sm_value = list(dataframe[
+                (dataframe["jmp_category"] == "SM") &
+                (dataframe["indicator"] == x["indicator"]) &
+                (dataframe["country"] == x["country"]) &
+                (dataframe["year"] == x["year"])
+            ]["value"])[0]
+            return x["value"] + sm_value
+        return x["value"]
+
+This function ensures that values under "ALB" category reflect combined levels of service access by adding "Safely Managed" (SM) values where applicable.
+
+---
+
+2.E.2 Progress Rates Collections
+--------------------------------
+
+The `progress_rates_df` DataFrame collects progress rates data from relevant IFs files. The code below prepares and processes each file, transforms the data, and appends it to `progress_rates_df`.
+
+**Columns**
+
+- `indicator`
+- `year`
+- `country`
+- `jmp_category`
+- `value_name`
+- `value`
+
+**Code**
+
+.. code-block:: python
+
+    progress_rates_columns = ["indicator", "year", "country", "jmp_category", "value_name", "value"]
+    progress_rates_df = pd.DataFrame(columns=progress_rates_columns)
+
+    for file in files:
+        if file.split("/")[3] not in year_filter_config["year_range"]["files"]:
+            continue
+        print(file)
+        data = pd.read_csv(file, header=[1,2,4,5], sep=',')
+
+        # Update column names
+        new_columns = list(data.columns)
+        for i, col in enumerate(new_columns):
+            if col == ('Unnamed: 0_level_0', 'Unnamed: 0_level_1', 'Unnamed: 0_level_2', 'Unnamed: 0_level_3'):
+                new_columns[i] = 'Year'
+        data.columns = new_columns
+        df = pd.DataFrame(data.to_dict('records'))
+
+        # Reshape data
+        df_melted = df.melt(id_vars=['Year'], var_name='variable', value_name='value')
+        new_data = []
+        for value_list in df_melted.to_dict('records'):
+            value_type = get_value_types(value_list["variable"][3])
+            new_data.append({
+                "year": int(value_list["Year"]),
+                "country": map_country_name(value_list["variable"][0]),
+                "2nd_dimension": value_list["variable"][1],
+                "unit": value_list["variable"][2],
+                "value_type": list(filter(lambda v: v, value_type)),
+                "value": value_list["value"]
+            })
+        df = pd.DataFrame(new_data)
+
+        # Split value types
+        df_split = pd.DataFrame(df['value_type'].tolist(), index=df.index)
+        df_split.columns = ['value_name', 'jmp_category', 'commitment']
+        df_final = pd.concat([df, df_split], axis=1)
+
+        # Assign indicator and categories
+        df_final['indicator'] = get_ifs_name(file)
+        df_final['jmp_category'] = df_final.apply(base_jmp_category, axis=1)
+        df_final['jmp_category'] = df_final['jmp_category'].replace({"BS": "ALB"})
+        df_final['commitment'] = df_final.apply(modify_commitment_name, axis=1)
+        df_final = df_final[df_final['commitment'] == "Base"]
+        df_final = df_final[progress_rates_columns]
+        df_final['value'] = df_final.apply(lambda x: get_alb_value_for_progress_rates(x, df_final), axis=1)
+        progress_rates_df = pd.concat([progress_rates_df.dropna(axis=1, how='all'), df_final], ignore_index=True)
+
+    progress_rates_df = progress_rates_df.sort_values(by=["indicator", "country", "jmp_category", "value_name", "year"])
+    progress_rates_df['yearly_increase'] = progress_rates_df.groupby(["indicator", "country", "jmp_category"])['value'].diff()
+
+This code block calculates yearly increases for each indicator and prepares the data for additional filtering.
+
+---
+
+2.E.3 Progress Rates Year Filters
+---------------------------------
+
+This step filters the progress rates to identify whether a country has reached full services for each indicator. For each group, the code calculates the average yearly increase and checks if the value has reached or exceeded 99%.
+
+**Code**
+
+.. code-block:: python
+
+    progress_rates_df["full_services"] = progress_rates_df["value"].apply(lambda x: x > 99)
+    filtered_dfs = []
+
+    for name, group in progress_rates_df.groupby(["indicator", "country", "jmp_category", "value_name"]):
+        group = group.sort_values(by="value")
+        group["yearly_increase"] = group["value"].diff()
+        avg_yearly_increase = group["yearly_increase"].mean()
+
+        reached_100 = group[group["value"] >= 99]
+        if not reached_100.empty:
+            filtered_group = reached_100.iloc[[0]].copy()
+            filtered_group.loc[:, "avg_yearly_increase"] = avg_yearly_increase
+            filtered_group.loc[:, "full_services"] = True
+        else:
+            filtered_group = pd.DataFrame({
+                "indicator": [name[0]],
+                "country": [name[1]],
+                "jmp_category": [name[2]],
+                "value_name": [name[3]],
+                "year": [2100],
+                "value": [group["value"].iloc[-1]],
+                "avg_yearly_increase": [avg_yearly_increase],
+                "full_services": False
+            })
+        filtered_dfs.append(filtered_group)
+
+    progress_rates_df = pd.concat(filtered_dfs, ignore_index=True)
+    progress_rates_df = progress_rates_df[progress_rates_columns + ["avg_yearly_increase", "full_services"]]
+
+This code identifies the first year that a country achieves "full services" (value >= 99%) for each indicator. If not reached, it sets a default year of 2100.
+
+---
+
+2.E.4 Progress Rates Key Table Mapping
+--------------------------------------
+
+The final step in processing progress rates is to apply key mappings to standardize `jmp_name_id`, `jmp_category_id`, `country_id`, and `indicator_id`.
+
+**Code**
+
+.. code-block:: python
+
+    progress_rates_df['jmp_name_id'] = progress_rates_df.apply(map_jmp_id, axis=1)
+    progress_rates_df = merge_id(progress_rates_df, jmp_categories_table, 'jmp_category')
+    progress_rates_df = merge_id(progress_rates_df, countries_table, 'country')
+    progress_rates_df = merge_id(progress_rates_df, indicator_table, 'indicator')
+    progress_rates_df = progress_rates_df.drop(columns=["value_name"])
+
+This mapping step ensures that all key columns in `progress_rates_df` have standardized IDs for consistency.
+
+---
+
+2.E.5 Save Progress Rates Table
+-------------------------------
+
+Finally, we save the processed `progress_rates_df` to a CSV file, `IFS_PR_OUTPUT_FILE`, for future analysis and visualization.
+
+**Code**
+
+.. code-block:: python
+
+    progress_rates_df.to_csv(IFS_PR_OUTPUT_FILE, index=False)
+
+The resulting table contains progress rates, yearly increase calculations, and flags for full services, providing a comprehensive view of progress toward WASH goals.
