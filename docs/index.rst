@@ -1,17 +1,17 @@
-===========================
-USAID-Tool-1 Documentation
-===========================
+===================================
+WASH Futures Explorer Documentation
+===================================
 
-**USAID-Tool-1** is a tool developed to illustrate the acceleration required to achieve universal access to clean water and sanitation. Built upon data from the International Futures (IF) model, it combines Python-based data transformations with PowerBI for visualizing potential future scenarios.
+**WASH Futures Explorer** is a tool developed to illustrate the acceleration required to achieve universal access to clean water and sanitation. Built upon data from the International Futures (IF) model, it combines Python-based data transformations with PowerBI for visualizing potential future scenarios.
 
-This documentation will guide you through the various components of USAID-Tool-1, including data input, transformation processes, and data visualization. Follow the links below to explore each section in detail.
+This documentation will guide you through the various components of WASH Futures Explorer, including data input, transformation processes, and data visualization. Follow the links below to explore each section in detail.
 
 ---
 
 Getting Started
 ===============
 
-To get started with USAID-Tool-1, follow these steps:
+To get started with WASH Futures Explorer, follow these steps:
 
 1. **Set up the environment**: Ensure that Python and PowerBI are installed. Refer to `configuration_guide.rst` for setup instructions.
 2. **Input Data**: Load the required data files as described in `data_input.rst`.
@@ -37,7 +37,7 @@ Contents
 About this Documentation
 ========================
 
-This documentation is structured to help both technical and non-technical users understand and utilize USAID-Tool-1 effectively. Each section contains detailed explanations, code snippets, and examples for ease of use.
+This documentation is structured to help both technical and non-technical users understand and utilize WASH Futures Explorer effectively. Each section contains detailed explanations, code snippets, and examples for ease of use.
 
 ---
 

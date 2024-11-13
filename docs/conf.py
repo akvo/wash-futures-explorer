@@ -8,9 +8,9 @@ import sphinx_rtd_theme
 # ones.
 extensions = []
 
-project = "USAID WSSH Tool 1"
+project = "WASH Futures Explorer"
 copyright = "2024, Akvo"
-author = "Deden Bangkit"
+author = "Akvo"
 
 extensions = [
     "sphinx_rtd_theme",

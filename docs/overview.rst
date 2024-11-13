@@ -5,7 +5,7 @@ Overview
 Purpose
 =======
 
-**USAID-Tool-1** is designed to monitor and illustrate the acceleration needed to achieve universal access to clean water and sanitation, based on USAID’s system strengthening efforts. Using data from the **International Futures (IF) model**, the tool combines Python-based data transformations with PowerBI visualizations to support data-driven insights and planning.
+**WASH Futures Explorer** is designed to monitor and illustrate the acceleration needed to achieve universal access to clean water and sanitation, based on USAID’s system strengthening efforts. Using data from the **International Futures (IF) model**, the tool combines Python-based data transformations with PowerBI visualizations to support data-driven insights and planning.
 
 Objectives
 ==========
@@ -17,7 +17,7 @@ Objectives
 Components
 ==========
 
-USAID-Tool-1 consists of three main components:
+WASH Futures Explorer consists of three main components:
 
 1. **Data Input**: Raw data derived from the IF model, household surveys, and secondary sources, containing historical and projected indicators related to water and sanitation.
 2. **Data Transformation**: A Jupyter Notebook processes and structures the data, preparing it for visualization. The notebook includes steps for data cleaning, calculation of progress rates, and structuring data for PowerBI.
@@ -26,7 +26,7 @@ USAID-Tool-1 consists of three main components:
 Usage Scenarios
 ===============
 
-USAID-Tool-1 is suitable for use by:
+WASH Futures Explorer is suitable for use by:
 - **Policy Makers**: To evaluate WASH progress and identify priority areas for intervention.
 - **Development Organizations**: To support strategy development, intervention adjustments, and investment planning.
 - **Data Analysts**: To explore and analyze data on clean water and sanitation access under various scenarios.
@@ -41,7 +41,7 @@ System Requirements
 Git Repository and Git LFS Configuration
 ========================================
 
-The USAID-Tool-1 project is managed using Git, with Git Large File Storage (Git LFS) to handle large data files efficiently. Git LFS is particularly useful for tracking and storing files that exceed Git's regular size limits, ensuring that large files (such as CSV, XLSX, and PBIX) are accessible without slowing down the repository.
+The WASH Futures Explorer project is managed using Git, with Git Large File Storage (Git LFS) to handle large data files efficiently. Git LFS is particularly useful for tracking and storing files that exceed Git's regular size limits, ensuring that large files (such as CSV, XLSX, and PBIX) are accessible without slowing down the repository.
 
 Git LFS Configuration
 ---------------------
@@ -54,7 +54,7 @@ The following `.gitattributes` configuration is used to track large files in the
     *.xlsx filter=lfs diff=lfs merge=lfs -text
     *.pbix filter=lfs diff=lfs merge=lfs -text
 
-Benefits of Git LFS for USAID-Tool-1
+Benefits of Git LFS for WASH Futures Explorer
 ------------------------------------
 
 Using Git LFS allows us to:
@@ -73,4 +73,4 @@ After cloning, the large files will be downloaded as needed when you check out s
 
 ---
 
-For more detailed information, refer to the individual sections on data input, transformation, and visualization. This overview provides a foundation for understanding the purpose, objectives, and methodology of USAID-Tool-1.
+For more detailed information, refer to the individual sections on data input, transformation, and visualization. This overview provides a foundation for understanding the purpose, objectives, and methodology of WASH Futures Explorer.

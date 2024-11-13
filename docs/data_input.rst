@@ -5,7 +5,7 @@ Data Input
 Overview
 ========
 
-The data for **USAID-Tool-1** is sourced from the **International Futures (IFs)** model, a free and open-source quantitative tool designed to help users think systematically about long-term global futures. Developed by the Frederick S. Pardee Center for International Futures, IFs is used by policymakers, researchers, and students worldwide to explore potential global trends, development goals, and targets. The IFs model offers insights into various indicators, including those relevant to water, sanitation, and hygiene (WASH) initiatives.
+The data for **WASH Futures Explorer** is sourced from the **International Futures (IFs)** model, a free and open-source quantitative tool designed to help users think systematically about long-term global futures. Developed by the Frederick S. Pardee Center for International Futures, IFs is used by policymakers, researchers, and students worldwide to explore potential global trends, development goals, and targets. The IFs model offers insights into various indicators, including those relevant to water, sanitation, and hygiene (WASH) initiatives.
 
 For more information about the IFs model, visit the `Pardee Wiki page <https://korbel.du.edu/pardee/content/download-ifs>`_.
 
@@ -25,7 +25,7 @@ To download the IFs model data, follow these steps:
 Data Files
 ==========
 
-The following files are included in **USAID-Tool-1** as primary data sources. Each file represents a different WASH or socio-economic indicator that will be used to analyze progress toward clean water and sanitation access:
+The following files are included in **WASH Futures Explorer** as primary data sources. Each file represents a different WASH or socio-economic indicator that will be used to analyze progress toward clean water and sanitation access:
 
 - **Deaths by Category of Cause - Millions (Diarrhea)**: `01. Deaths by Category of Cause - Millions (2nd Dimensions = Diarrhea).csv`
 - **Poverty Headcount (< $2.15 per Day)**: `06. Poverty Headcount less than $2.15 per Day, Log Normal - Millions.csv`
@@ -53,4 +53,4 @@ All data files are organized under the `input_data` directory as follows:
 
 ---
 
-Refer to the `data_transformation.rst` section for details on how these data files are processed and prepared for visualization within **USAID-Tool-1**.
+Refer to the `data_transformation.rst` section for details on how these data files are processed and prepared for visualization within **WASH Futures Explorer**.

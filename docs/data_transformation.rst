@@ -5,7 +5,7 @@ Data Transformation
 Overview
 ========
 
-The data transformation for **USAID-Tool-1** is performed within a Jupyter Notebook, located in the `src` folder as `main.ipynb`. This notebook prepares the raw data for visualization by performing multiple transformation steps on the IFs and JMP datasets, which are essential for calculating progress rates and organizing WASH indicators.
+The data transformation for **WASH Futures Explorer** is performed within a Jupyter Notebook, located in the `src` folder as `main.ipynb`. This notebook prepares the raw data for visualization by performing multiple transformation steps on the IFs and JMP datasets, which are essential for calculating progress rates and organizing WASH indicators.
 
 Required libraries are listed in the `requirements.txt` file in the `src` folder.
 

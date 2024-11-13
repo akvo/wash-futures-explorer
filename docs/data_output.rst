@@ -15,7 +15,7 @@ The output files are organized as follows:
 
 .. code-block:: text
 
-    usaid-wssh-tool-1/output_data
+    wash-futures-explorer/output_data
     ├── key_actual_commitment.csv
     ├── key_commitment.csv
     ├── key_country.csv
