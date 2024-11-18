@@ -33,7 +33,7 @@ Components
 WASH Futures Explorer tool consists of three main components regarding data processing:
 
 
-1. ***Data Input**: Raw data downloaded from the IFs model, containing historical and projected indicators related to water and sanitation, health, prosperity and governance.
+1. **Data Input**: Raw data downloaded from the IFs model, containing historical and projected indicators related to water and sanitation, health, prosperity and governance.
 2. **Data Transformation**: A Jupyter Notebook processes and structures the data, preparing it for visualization. The notebook includes steps for data cleaning, calculation of progress rates, and structuring data for PowerBI.
 3. **Data Visualization**: PowerBI dashboards display trends, comparisons, and projections in an interactive format, providing stakeholders with actionable insights.
 
