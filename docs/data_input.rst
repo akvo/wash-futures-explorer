@@ -16,7 +16,7 @@ In the IFs model, WASH intervention scenarios refers to different policy interve
 .. note::
    For more information about the IFs model, visit the `Pardee Wiki page <https://korbel.du.edu/pardee/content/download-ifs>`_.
 
-.. image:: /_static/images/flow-chart-of-water-and-sanitation-model.png
+.. image:: ./_static/images/flow-chart-of-water-and-sanitation-model.png
    :alt: Flow Chart of Water and Sanitation Model
    :align: center
 
