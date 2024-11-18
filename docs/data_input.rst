@@ -7,11 +7,18 @@ Overview
 
 The data for **WASH Futures Explorer** is sourced from the **International Futures (IFs)** model, a free and open-source quantitative tool designed to help users think systematically about long-term global futures. Developed by the Frederick S. Pardee Center for International Futures, IFs is used by policymakers, researchers, and students worldwide to explore potential global trends, development goals, and targets. The IFs model offers insights into various indicators, including those relevant to water, sanitation, and hygiene (WASH) initiatives.
 
-For more information about the IFs model, visit the `Pardee Wiki page <https://korbel.du.edu/pardee/content/download-ifs>`_.
-
 .. image:: https://korbel.du.edu/sites/default/files/IFsOverviewChart.jpg
    :alt: International Futures (IFs) Overview Chart
    :align: center
+
+In the IFs model, WASH intervention scenarios refers to different policy interventions or changes in key drivers that users can input. These might include investments in infrastructure, policy reforms, or public health campaigns aimed at improving WASH services. Next, the model uses complex algorithms to simulate how these interventions would impact various indicators. This includes changes in access to water and sanitation, health outcomes (e.g., reduction in waterborne diseases), and overall quality of life. The model allows for the comparison of multiple scenarios side-by-side. Users can see how different levels of investment or policy changes might lead to different outcomes, helping policymakers understand the potential benefits and trade-offs.
+
+For more information about the IFs model, visit the `Pardee Wiki page <https://korbel.du.edu/pardee/content/download-ifs>`_.
+
+.. image:: ../_static/images/flow-chart-of-water-and-sanitation-model.png
+   :alt: Flow Chart of Water and Sanitation Model
+   :align: center
+
 
 Data Download
 =============
