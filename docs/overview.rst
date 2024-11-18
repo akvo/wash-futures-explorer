@@ -5,7 +5,7 @@ Overview
 Purpose
 =======
 
-**WASH Futures Explorer** is designed to monitor and illustrate the acceleration needed to achieve universal access to clean water and sanitation, based on USAID’s system strengthening efforts. USAID suggested using **the International Futures (IFs)** model from the University of Denver’s Pardee Institute for International Development or a similar model. The IFs Model was chosen due to its widespread use by USAID and other development organizations, as well as its ability to adjust parameters related to WASH inputs. Using data from the International Futures (IFs) model, the tool combines Python-based data transformations with PowerBI visualizations to support data-driven insights and planning.
+**WASH Futures Explorer** is designed to monitor and illustrate the acceleration needed to achieve universal access to clean water and sanitation, based on USAID’s system strengthening efforts. USAID suggested using **the International Futures (IFs)** model from the University of Denver’s Pardee Institute for International Development or a similar model. The IFs Model was chosen due to its widespread use by USAID and other development organizations, as well as its ability to adjust parameters related to WASH inputs. Using data from the International Futures (IFs) model, the tool combines Python-based data transformations with PowerBI visualisations to support data-driven insights and planning.
 
 The WASH Futures Explorer enables users to compare different WASH intervention scenarios and assess their impact on various development indicators such as water and sanitation accessibility, health outcomes, prosperity and governance. Based on the data from IFs model, the purpose of WASH Futures Explorer is to give some simple and clear talking points to WASH planners on why their government should invest more in WASH and what potential benefit it has for other sectors.
 
@@ -33,8 +33,8 @@ WASH Futures Explorer tool consists of three main components regarding data proc
 
 
 1. **Data Input**: Raw data downloaded from the IFs model, containing historical and projected indicators related to water and sanitation, health, prosperity and governance.
-2. **Data Transformation**: A Jupyter Notebook processes and structures the data, preparing it for visualization. The notebook includes steps for data cleaning, calculation of progress rates, and structuring data for PowerBI.
-3. **Data Visualization**: PowerBI dashboards display trends, comparisons, and projections in an interactive format, providing stakeholders with actionable insights.
+2. **Data Transformation**: A Jupyter Notebook processes and structures the data, preparing it for visualisation. The notebook includes steps for data cleaning, calculation of progress rates, and structuring data for PowerBI.
+3. **Data Visualisation**: PowerBI dashboards display trends, comparisons, and projections in an interactive format, providing stakeholders with actionable insights.
 
 Usage Scenarios
 ===============
@@ -52,7 +52,7 @@ System Requirements
 
 - **Python**: Version 3.7 or higher, with packages listed in `requirements.txt`.
 - **Jupyter Notebook**: For running data transformation scripts in an interactive environment.
-- **PowerBI**: PowerBI Desktop or a compatible version for data visualization.
+- **PowerBI**: PowerBI Desktop or a compatible version for data visualisation.
 
 Git Repository and Git LFS Configuration
 ========================================
@@ -88,7 +88,7 @@ To clone the repository with Git LFS, ensure Git LFS is installed on your system
 After cloning, the large files will be downloaded as needed when you check out specific branches or commits.
 
 .. note::
-   For more detailed information, refer to the individual sections on data input, transformation, and visualization. This overview provides a foundation for understanding the purpose, objectives, and methodology of WASH Futures Explorer.
+   For more detailed information, refer to the individual sections on data input, transformation, and visualisation. This overview provides a foundation for understanding the purpose, objectives, and methodology of WASH Futures Explorer.
 
 
 Sustainability Plan
@@ -110,6 +110,5 @@ A feedback form has been added to the tool and it is expected that we will gathe
 
 Licensing
 ---------
-GNU General Public License: `license link`_.
 
-.. _license link: https://github.com/akvo/usaid-wssh/blob/main/LICENSE
+`GNU General Public License <https://github.com/akvo/usaid-wssh/blob/main/LICENSE>`_.

@@ -13,9 +13,10 @@ The data for **WASH Futures Explorer** is sourced from the **International Futur
 
 In the IFs model, WASH intervention scenarios refers to different policy interventions or changes in key drivers that users can input. These might include investments in infrastructure, policy reforms, or public health campaigns aimed at improving WASH services. Next, the model uses complex algorithms to simulate how these interventions would impact various indicators. This includes changes in access to water and sanitation, health outcomes (e.g., reduction in waterborne diseases), and overall quality of life. The model allows for the comparison of multiple scenarios side-by-side. Users can see how different levels of investment or policy changes might lead to different outcomes, helping policymakers understand the potential benefits and trade-offs.
 
-For more information about the IFs model, visit the `Pardee Wiki page <https://korbel.du.edu/pardee/content/download-ifs>`_.
+.. note::
+   For more information about the IFs model, visit the `Pardee Wiki page <https://korbel.du.edu/pardee/content/download-ifs>`_.
 
-.. image:: ../_static/images/flow-chart-of-water-and-sanitation-model.png
+.. image:: /_static/images/flow-chart-of-water-and-sanitation-model.png
    :alt: Flow Chart of Water and Sanitation Model
    :align: center
 
@@ -50,14 +51,16 @@ The following files are included in **WASH Futures Explorer** as primary data so
 - **Stunted Children (Million)**: `24. Stunted children, History and Forecast - Million.csv`
 - **Malnourished Children (Million)**: `26. Malnourished Children, Headcount - Millions.csv`
 
-Data Organization
+Data Organisation
 =================
 
-All data files are organized under the `input_data` directory as follows:
+All data files are organised under the `input_data` directory as follows:
 
 - **input_data/IFs**: Contains the IFs model data files listed above.
 - **input_data/JMP**: Contains additional data from the Joint Monitoring Programme (JMP), specifically the file `JMP-2023-world.xlsx`, which provides complementary information on WASH indicators.
 
 ---
 
-Refer to the `data_transformation.rst` section for details on how these data files are processed and prepared for visualization within **WASH Futures Explorer**.
+
+.. note::
+   Refer to the `data_transformation.rst` section for details on how these data files are processed and prepared for visualisation within **WASH Futures Explorer**.
