@@ -2,7 +2,8 @@
 Data Batch Processing
 =====================
 
-**Batch processing in the International Futures model - WASH Futures Explorer This document describes how to perform batch processing in the International Futures model.**
+.. note::
+   This page describes how to perform batch processing in **the International Futures model**.
 
 The International Futures model
 ===============================
@@ -34,7 +35,7 @@ How to Install the International Futures Model for Batch Processing
 Go to `IFs Download Page <https://korbel.du.edu/pardee/content/download-ifs>`_ and click on the latest IFs model to download it locally , for example `IFs V8.06 (September 2023) <https://ifsfiles.du.edu/IFs%20with%20Pardee%208_06%20September%2022%202023.zip>`_.
 
 Step 1: Create Scenario Files
-*****************************
+******************************
 
 A scenario file is a text file (with extension .sce) that describes the scenario to be run in the IFs model. We use 36 scenarios:
 
