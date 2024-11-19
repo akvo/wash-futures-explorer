@@ -31,7 +31,7 @@ Batch processing refers to the bulk download of data - in this case scenario run
 How to Install the International Futures Model for Batch Processing
 ===================================================================
 
-Go to `IFs Download Page <https://korbel.du.edu/pardee/content/download-ifs>`_ and click on the latest IFs model to download it locally , for example "IFs V8.06 (September 2023)".
+Go to `IFs Download Page <https://korbel.du.edu/pardee/content/download-ifs>`_ and click on the latest IFs model to download it locally , for example `IFs V8.06 (September 2023) <https://ifsfiles.du.edu/IFs%20with%20Pardee%208_06%20September%2022%202023.zip>`_.
 
 Step 1: Create Scenario Files
 *****************************
@@ -45,7 +45,7 @@ A scenario file is a text file (with extension .sce) that describes the scenario
 Step 2: Batch Run All Scenario Files
 ************************************
 
-#. Hover over "Scenario Analysis" and click on "Batch Run".
+#. Hover over **Scenario Analysis** and click on **Batch Run**.
 
 #. In the page that appears, follow the steps in the screenshot below:
 
