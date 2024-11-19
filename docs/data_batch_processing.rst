@@ -96,19 +96,21 @@ In order  to generate a scenario file (for example **sanithhbasictrgtyr = 12, sh
 
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-1.png
       :alt: Batch 1
-      :align: center
+      :align: left
 
 #. Hover over **Set Group or Country**. Then select **Groups**.
 
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-2.png
       :alt: Batch 2
-      :align: center
+      :align: left
+      :width: 80%
 
 #. Select **Parameter Search**. The following box will appear.
 
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-3.png
       :alt: Batch 3
-      :align: center
+      :align: left
+      :width: 60%
 
    #. Type the full parameter name or a key word it contains in the box.
 
@@ -131,7 +133,8 @@ In the window that appears, follow these 3 steps:
 
       .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-4.png
          :alt: Batch 4
-         :align: center
+         :align: left
+         :width: 60%
 
       .. note::
          for mixed scenarios (scenarios using more than one parameter), repeat the process for the rest of parameters. Apply steps from (4) to (6).
@@ -142,7 +145,8 @@ In the window that appears, follow these 3 steps:
 
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-5.png
       :alt: Batch 5
-      :align: center
+      :align: left
+      :width: 60%
 
    #. Enter the name of the scenario (remember to limit the number of characters to 12 maximum).
 
@@ -154,12 +158,12 @@ In the window that appears, follow these 3 steps:
 
 You can now generate a new scenario by repeating the process until you get all scenarios in the same folder.
 
-The folder with the scenarios will be located in `C:\Users\...\AppData\Local\IFs\Scenario\a User Defined Scenarios`. Both names (folder and scenarios) can be renamed locally and the change will be taken into account automatically when you close and open the IFs software again.
+The folder with the scenarios will be located in **C:\Users\...\AppData\Local\IFs\Scenario\a User Defined Scenarios**. Both names (folder and scenarios) can be renamed locally and the change will be taken into account automatically when you close and open the IFs software again.
 
-Facultative action but good for scenarios batch management: move the folder one step back. For example, from `C:\Users\...\AppData\Local\IFs\Scenario\a User Defined Scenarios`
-to `C:\Users\...\AppData\Local\IFs\Scenario`.
+Facultative action but good for scenarios batch management: move the folder one step back. For example, from **C:\Users\...\AppData\Local\IFs\Scenario\a User Defined Scenarios**
+to **C:\Users\...\AppData\Local\IFs\Scenario**.
 
-Scenarios generated on one laptop can be used on a different laptop as well. If  a bunch of scenarios have already been generated on one laptop, there is no need to generate the same scenarios again. Just copy and paste the scenarios from `C:\Users\...\AppData\Local\IFs\Scenario`, and the scenarios will be taken into account automatically in the IFs software. You will now be able to process the batch running of these scenarios.
+Scenarios generated on one laptop can be used on a different laptop as well. If  a bunch of scenarios have already been generated on one laptop, there is no need to generate the same scenarios again. Just copy and paste the scenarios from **C:\Users\...\AppData\Local\IFs\Scenario**, and the scenarios will be taken into account automatically in the IFs software. You will now be able to process the batch running of these scenarios.
 
 
 Step 2: Batch Run All Scenario Files
@@ -169,13 +173,15 @@ Step 2: Batch Run All Scenario Files
 
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-6.png
       :alt: Batch 6
-      :align: center
+      :align: left
+      :width: 80%
 
 #. In the page that appears, follow the steps in the screenshot below:
 
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-7.png
       :alt: Batch 7
-      :align: center
+      :align: left
+      :width: 80%
 
    #. Unfold the folder **a User Defined Scenario** by clicking in the triangular icon on the left.
 
@@ -199,19 +205,19 @@ For all scenarios, some .csv files have to be generated for all focus indicators
    :widths: 2, 68, 15, 15
 
     N°,Indicator name,Dimensions to select,Objective
-    1,"Deaths by Category of Cause - Millions","2nd Dim. = Diarrhea; 3rd Dim. = Total",Decrease
-    2,"Poverty Headcount <$2.15 per Day, Log Normal - Millions",-,Decrease
-    3,"State Failure Instability Event - IFs Index",-,Decrease
-    4,"Governance Effectiveness - WB index",-,Decrease
+    1,"Deaths by Category of Cause - Millions","2nd Dim. = Diarrhea;3rd Dim. = Total",Decrease
+    2,"Poverty Headcount <$2.15 per Day, Log Normal - Millions",,Decrease
+    3,"State Failure Instability Event - IFs Index",,Decrease
+    4,"Governance Effectiveness - WB index",,Decrease
     5,"Sanitation Services, Access, percent of population","2nd Dim. = Basic, Safely Managed; 3rd Dim. = Total",Increase
     6,"Sanitation Services, Access, Number of people, million","2nd Dim. = Basic, Safely Managed; 3rd Dim. = Total",Increase
-    7,"Sanitation Services, Expenditure, Capital, Billion $","2nd Dim. = Basic, “Safely Managed”; 3rd Dim. = Total",Increase
+    7,"Sanitation Services, Expenditure, Capital, Billion $","2nd Dim. = Basic, Safely Managed; 3rd Dim. = Total",Increase
     8,"Water Services, Access, percent of population","2nd Dim. = Basic, Safely Managed; 3rd Dim. = Total",Increase
     9,"Water Services, Access, Number of people, million","2nd Dim. = Basic, Safely Managed; 3rd Dim. = Total",Increase
     10,"Water Services, Expenditure, Capital, Billion $","2nd Dim. = Basic, Safely Managed; 3rd Dim. = Total",Increase
-    11,"GDP (PPP) - Billion dollars",-,Increase
-    12,"Stunted children, History and Forecast - Million",-,Decrease
-    13,"Malnourished Children, Headcount - Millions",-,Decrease
+    11,"GDP (PPP) - Billion dollars",,Increase
+    12,"Stunted children, History and Forecast - Million",,Decrease
+    13,"Malnourished Children, Headcount - Millions",,Decrease
 
 To get data for a specific indicator, follow the steps below to get the .csv file.
 
@@ -219,13 +225,15 @@ To get data for a specific indicator, follow the steps below to get the .csv fil
 
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-8.png
       :alt: Batch 8
-      :align: center
+      :align: left
+      :width: 80%
 
 #. Follow the steps in the screenshot below.
 
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-9.png
       :alt: Batch 9
-      :align: center
+      :align: left
+      :width: 80%
 
    #. Press CTRL+F on your keyboard and enter the whole name of the indicator or a keyword contained in it.
 
@@ -249,7 +257,8 @@ To get data for a specific indicator, follow the steps below to get the .csv fil
 
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-10.png
       :alt: Batch 10
-      :align: center
+      :align: left
+      :width: 80%
 
 #. Rename the downloaded file which is ifs.csv by default.
 
