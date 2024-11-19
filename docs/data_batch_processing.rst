@@ -88,13 +88,95 @@ A scenario file is a text file (with extension .sce) that describes the scenario
     35,"(waterhhm = 4, safely managed, total, shift years = 6) & (sanithhm = 4, safely managed, total, shift years = 6)",WSI_SM_4x,Increase safely managed water & sanitation services by factor 4
     36,"(waterhhm = 6, safely managed, total, shift years = 6) & (sanithhm = 6, safely managed, total, shift years = 6)",WSI_SM_6x,Increase safely managed water & sanitation services by factor 6
 
+In order  to generate a scenario file (for example **sanithhbasictrgtyr = 12, shift years = 6**), follow the next steps:
+
+#. Open the International Futures (IFs) desktop application.
+
+#. Hover over **Scenario Analysis** then select ***Quick scenario analysis with Tree** in the pop-up
+
+   .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-1.png
+      :alt: Batch 1
+      :align: left
+
+#. Hover over **Set Group or Country**. Then select **Groups**.
+
+   .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-2.png
+      :alt: Batch 2
+      :align: left
+
+#. Select **Parameter Search**. The following box will appear.
+
+   .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-3.png
+      :alt: Batch 3
+      :align: left
+
+   #. Type the full parameter name or a key word it contains in the box.
+
+   #. Click on **Search** or press Enter.
+
+   #. Select the correct parameter.
+
+   #. Select **Define** to see the full description of the parameter.
+
+   #. Click **Load**.
+
+#. Select **World** then **Total** in the box with the header **Please pick a dimension from the dropdown**.
+
+   In the window that appears, follow these 3 steps:
+
+   #. Enter the parameter value.
+
+   #. Click on **Apply**.
+
+   #. Enter 6 in the **Shift Years** box.
+
+      .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-4.png
+         :alt: Batch 4
+         :align: left
+
+      .. note::
+         for mixed scenarios (scenarios using more than one parameter), repeat the process for the rest of parameters. Apply steps from (4) to (6).
+
+#. Save the scenario file by moving the mouse to **Scenario Files** and  clicking on **Name and Save**.
+
+#. The following box will appear.
+
+   .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-5.png
+      :alt: Batch 5
+      :align: left
+
+   #. Enter the name of the scenario (remember to limit the number of characters to 12 maximum).
+
+   #. Provide the name of the file where the scenarios should be stored.
+
+   #. Click **Save**.
+
+#. Move the mouse to **Scenario files** then click on **Clear tree** to come back to the software main menu.
+
+You can now generate a new scenario by repeating the process until you get all scenarios in the same folder.
+
+The folder with the scenarios will be located in **C:\\Users\\...\\AppData\\Local\\IFs\\Scenario\\a User Defined Scenarios**. Both names (folder and scenarios) can be renamed locally and the change will be taken into account automatically when you close and open the IFs software again.
+
+Facultative action but good for scenarios batch management: move the folder one step back. For example, from **C:\\Users\\...\\AppData\\Local\\IFs\\Scenario\\a User Defined Scenarios**
+to **C:\\Users\\...\AppData\\Local\\IFs\\Scenario**.
+
+Scenarios generated on one laptop can be used on a different laptop as well. If  a bunch of scenarios have already been generated on one laptop, there is no need to generate the same scenarios again. Just copy and paste the scenarios from **C:\\Users\\...\\AppData\\Local\\IFs\\Scenario**, and the scenarios will be taken into account automatically in the IFs software. You will now be able to process the batch running of these scenarios.
+
 
 Step 2: Batch Run All Scenario Files
-************************************
+***************************************
 
 #. Hover over **Scenario Analysis** and click on **Batch Run**.
 
+   .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-6.png
+      :alt: Batch 6
+      :align: left
+
 #. In the page that appears, follow the steps in the screenshot below:
+
+   .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-7.png
+      :alt: Batch 7
+      :align: left
 
    #. Unfold the folder **a User Defined Scenario** by clicking in the triangular icon on the left.
 
@@ -111,3 +193,67 @@ Step 3: Download the Output Files
 *********************************
 
 For all scenarios, some .csv files have to be generated for all focus indicators. For the WASH Futures Explorer, this is the complete list of indicators we used.
+
+
+.. csv-table:: List of Indicators
+   :header: "N°", "Indicator Name", "Dimensions to select", "Objective"
+   :widths: 2, 68, 15, 15
+
+    N°,Indicator name,Dimensions to select,Objective
+    1,"Deaths by Category of Cause - Millions","2nd Dim. = Diarrhea;3rd Dim. = Total",Decrease
+    2,"Poverty Headcount <$2.15 per Day, Log Normal - Millions",,Decrease
+    3,"State Failure Instability Event - IFs Index",,Decrease
+    4,"Governance Effectiveness - WB index",,Decrease
+    5,"Sanitation Services, Access, percent of population","2nd Dim. = Basic, Safely Managed; 3rd Dim. = Total",Increase
+    6,"Sanitation Services, Access, Number of people, million","2nd Dim. = Basic, Safely Managed; 3rd Dim. = Total",Increase
+    7,"Sanitation Services, Expenditure, Capital, Billion $","2nd Dim. = Basic, Safely Managed; 3rd Dim. = Total",Increase
+    8,"Water Services, Access, percent of population","2nd Dim. = Basic, Safely Managed; 3rd Dim. = Total",Increase
+    9,"Water Services, Access, Number of people, million","2nd Dim. = Basic, Safely Managed; 3rd Dim. = Total",Increase
+    10,"Water Services, Expenditure, Capital, Billion $","2nd Dim. = Basic, Safely Managed; 3rd Dim. = Total",Increase
+    11,"GDP (PPP) - Billion dollars",,Increase
+    12,"Stunted children, History and Forecast - Million",,Decrease
+    13,"Malnourished Children, Headcount - Millions",,Decrease
+
+To get data for a specific indicator, follow the steps below to get the .csv file.
+
+#. Move the mouse to **Display** then select **Flexible display**.
+
+   .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-8.png
+      :alt: Batch 8
+      :align: left
+
+#. Follow the steps in the screenshot below.
+
+   .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-9.png
+      :alt: Batch 9
+      :align: left
+
+   #. Press CTRL+F on your keyboard and enter the whole name of the indicator or a keyword contained in it.
+
+   #. Select **Country/regions and Groups**.
+
+   #. Select the focus indicator name.
+
+   #. Select the horizon year for analysis.
+
+   #. Select all focus scenarios. Hold down the CTRL key to select multiple scenarios at once.Do not forget to include the base scenario **IFsBase.run.db** as all analyses are based on these values.
+
+   #. Select all focus countries. Hold down the CTRL key to select multiple countries at once. Do not forget to include the group of focus countries created before.
+
+   #. Select the focus dimensions (the number of dimensions depends on the indicator selected).
+
+   #. Refer to the table above, specifically the column **Dimensions to select**.
+
+   #. Click on **Table** to see the data.
+
+#. Move the mouse to **Save** then click **Save Normal View**. A .csv file will automatically be downloaded into  the desktop's local downloads.
+
+   .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-10.png
+      :alt: Batch 10
+      :align: left
+
+#. Rename the downloaded file which is ifs.csv by default.
+
+#. Click on **Continue** to return to the software's main menu.
+
+#. Repeat the same process to get data for the  next indicator.
