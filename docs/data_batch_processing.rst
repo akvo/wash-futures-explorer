@@ -103,14 +103,12 @@ In order  to generate a scenario file (for example **sanithhbasictrgtyr = 12, sh
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-2.png
       :alt: Batch 2
       :align: left
-      :width: 80%
 
 #. Select **Parameter Search**. The following box will appear.
 
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-3.png
       :alt: Batch 3
       :align: left
-      :width: 60%
 
    #. Type the full parameter name or a key word it contains in the box.
 
@@ -134,7 +132,6 @@ In the window that appears, follow these 3 steps:
       .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-4.png
          :alt: Batch 4
          :align: left
-         :width: 60%
 
       .. note::
          for mixed scenarios (scenarios using more than one parameter), repeat the process for the rest of parameters. Apply steps from (4) to (6).
@@ -146,7 +143,6 @@ In the window that appears, follow these 3 steps:
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-5.png
       :alt: Batch 5
       :align: left
-      :width: 60%
 
    #. Enter the name of the scenario (remember to limit the number of characters to 12 maximum).
 
@@ -174,14 +170,12 @@ Step 2: Batch Run All Scenario Files
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-6.png
       :alt: Batch 6
       :align: left
-      :width: 80%
 
 #. In the page that appears, follow the steps in the screenshot below:
 
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-7.png
       :alt: Batch 7
       :align: left
-      :width: 80%
 
    #. Unfold the folder **a User Defined Scenario** by clicking in the triangular icon on the left.
 
@@ -226,14 +220,12 @@ To get data for a specific indicator, follow the steps below to get the .csv fil
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-8.png
       :alt: Batch 8
       :align: left
-      :width: 80%
 
 #. Follow the steps in the screenshot below.
 
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-9.png
       :alt: Batch 9
       :align: left
-      :width: 80%
 
    #. Press CTRL+F on your keyboard and enter the whole name of the indicator or a keyword contained in it.
 
@@ -258,7 +250,6 @@ To get data for a specific indicator, follow the steps below to get the .csv fil
    .. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/batch-10.png
       :alt: Batch 10
       :align: left
-      :width: 80%
 
 #. Rename the downloaded file which is ifs.csv by default.
 
