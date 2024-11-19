@@ -15,15 +15,11 @@ Use of the International Futures (IFs) model within USAID WSSH Data & Analytics 
 - The effect of changingWASH investments or policies on the  access  to Water and Sanitation services.
 - The effect of changing WASH investments or policies on key health, prosperity, and governance indicators.
 
-For more info regarding the International Futures Model, please check:
+.. note::
+   For more info regarding the International Futures Model, please check: `African Futures Project: Water & Sanitation <https://www.youtube.com/watch?v=elHWDJIizvQ>`_
 
-.. raw:: html
-
-         <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-         <iframe src="https://www.youtube.com/embed/elHWDJIizvQ?si=AII7YuY12a9zYsA7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-         </div>
-
-Current WASH Futures Explorer: `PowerBI Link <https://app.powerbi.com/view?r=eyJrIjoiMjg3ZDc2ZDMtNGRlOC00MjMzLWFhODAtMjVhZTkyZjBjZjNmIiwidCI6ImIxNzBlMTE1LWRjM2QtNGU5Mi04NWJlLWU0YjMwMDljNWRjMiIsImMiOjl9>`_
+.. note::
+   Current WASH Futures Explorer: `PowerBI Link <https://app.powerbi.com/view?r=eyJrIjoiMjg3ZDc2ZDMtNGRlOC00MjMzLWFhODAtMjVhZTkyZjBjZjNmIiwidCI6ImIxNzBlMTE1LWRjM2QtNGU5Mi04NWJlLWU0YjMwMDljNWRjMiIsImMiOjl9>`_
 
 Why Batch Processing?
 =====================
@@ -50,11 +46,17 @@ Step 2: Batch Run All Scenario Files
 ************************************
 
 #. Hover over "Scenario Analysis" and click on "Batch Run".
+
 #. In the page that appears, follow the steps in the screenshot below:
+
    #. Unfold the folder **a User Defined Scenario** by clicking in the triangular icon on the left.
+
    #. Select the scenario of interest.
+
    #. Change **Run Year** (the maximum is 2100).
+
    #. Click on **Select**
+
 #. Wait until you see the text **International Futures has finished running one or more scenarios/cases.** On the screen, click **Continue** to come back to the software’s main menu.
 
 
