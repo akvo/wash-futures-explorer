@@ -20,14 +20,14 @@ For more info regarding the International Futures Model, please check:
 .. raw:: html
 
          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-         <iframe src="https://www.youtube.com/watch?v=elHWDJIizvQ" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+         <iframe src="https://www.youtube.com/embed/elHWDJIizvQ?si=AII7YuY12a9zYsA7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
          </div>
 
 Current WASH Futures Explorer: `PowerBI Link <https://app.powerbi.com/view?r=eyJrIjoiMjg3ZDc2ZDMtNGRlOC00MjMzLWFhODAtMjVhZTkyZjBjZjNmIiwidCI6ImIxNzBlMTE1LWRjM2QtNGU5Mi04NWJlLWU0YjMwMDljNWRjMiIsImMiOjl9>`_
 
 Why Batch Processing?
 =====================
-Batch processing refers to the bulk download of data - in this case scenario runs of the IFs model. The desktop version of the IFs model has the ability to do batch processing, which is not possible in the online version. In other words, downloading a large amount of data  using the online version is a lengthy process (due to repetitive clicking, and in part because the online version is more error prone). With batch processing, many scenarios can be run simultaneously, thus speeding up the process. .
+Batch processing refers to the bulk download of data - in this case scenario runs of the IFs model. The desktop version of the IFs model has the ability to do batch processing, which is not possible in the online version. In other words, downloading a large amount of data  using the online version is a lengthy process (due to repetitive clicking, and in part because the online version is more error prone). With batch processing, many scenarios can be run simultaneously, thus speeding up the process.
 
 .. note::
    The IFs desktop model runs only on Windows machines and is not compatible with Mac or Linux Operating System.
@@ -49,13 +49,13 @@ A scenario file is a text file (with extension .sce) that describes the scenario
 Step 2: Batch Run All Scenario Files
 ************************************
 
-#. 1. Hover over "Scenario Analysis" and click on "Batch Run".
-#. 2. In the page that appears, follow the steps in the screenshot below:
-   * 1. Unfold the folder **a User Defined Scenario** by clicking in the triangular icon on the left.
-   * 2. Select the scenario of interest.
-   * 3. Change **Run Year** (the maximum is 2100).
-   * 4. Click on **(S)elect**
-#. 3. Wait until you see the text **International Futures has finished running one or more scenarios/cases.** On the screen, click **Continue** to come back to the software’s main menu.
+#. Hover over "Scenario Analysis" and click on "Batch Run".
+#. In the page that appears, follow the steps in the screenshot below:
+   #. Unfold the folder **a User Defined Scenario** by clicking in the triangular icon on the left.
+   #. Select the scenario of interest.
+   #. Change **Run Year** (the maximum is 2100).
+   #. Click on **Select**
+#. Wait until you see the text **International Futures has finished running one or more scenarios/cases.** On the screen, click **Continue** to come back to the software’s main menu.
 
 
 Step 3: Download the Output Files
