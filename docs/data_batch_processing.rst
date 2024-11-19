@@ -155,12 +155,12 @@ In order  to generate a scenario file (for example **sanithhbasictrgtyr = 12, sh
 
 You can now generate a new scenario by repeating the process until you get all scenarios in the same folder.
 
-The folder with the scenarios will be located in **C:\Users\...\AppData\Local\IFs\Scenario\a User Defined Scenarios**. Both names (folder and scenarios) can be renamed locally and the change will be taken into account automatically when you close and open the IFs software again.
+The folder with the scenarios will be located in **C:\\Users\\...\\AppData\\Local\\IFs\\Scenario\\a User Defined Scenarios**. Both names (folder and scenarios) can be renamed locally and the change will be taken into account automatically when you close and open the IFs software again.
 
-Facultative action but good for scenarios batch management: move the folder one step back. For example, from **C:\Users\...\AppData\Local\IFs\Scenario\a User Defined Scenarios**
-to **C:\Users\...\AppData\Local\IFs\Scenario**.
+Facultative action but good for scenarios batch management: move the folder one step back. For example, from **C:\\Users\\...\\AppData\\Local\\IFs\\Scenario\\a User Defined Scenarios**
+to **C:\\Users\\...\AppData\\Local\\IFs\\Scenario**.
 
-Scenarios generated on one laptop can be used on a different laptop as well. If  a bunch of scenarios have already been generated on one laptop, there is no need to generate the same scenarios again. Just copy and paste the scenarios from **C:\Users\...\AppData\Local\IFs\Scenario**, and the scenarios will be taken into account automatically in the IFs software. You will now be able to process the batch running of these scenarios.
+Scenarios generated on one laptop can be used on a different laptop as well. If  a bunch of scenarios have already been generated on one laptop, there is no need to generate the same scenarios again. Just copy and paste the scenarios from **C:\\Users\\...\\AppData\\Local\\IFs\\Scenario**, and the scenarios will be taken into account automatically in the IFs software. You will now be able to process the batch running of these scenarios.
 
 
 Step 2: Batch Run All Scenario Files
