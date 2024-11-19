@@ -43,14 +43,50 @@ A scenario file is a text file (with extension .sce) that describes the scenario
    High-priority countries include: Dem. Republic of the Congo, Ethiopia, Ghana, Guatemala, Haiti, India, Indonesia, Kenya, Liberia, Madagascar, Malawi, Mali, Mozambique, Nepal, Nigeria, Philippines, Rwanda, Senegal, Sudan South, Tanzania, Uganda, Zambia.
 
 .. csv-table:: Scenario of reaching water and sanitation in 2030 and 2050
-   :file: _static/csv/1-scenario-of-reaching-water-and-sanitation-in-2030-and-2050.csv
+   :header: "N°", "Scenario (parameter)", "Code", "Description"
    :widths: 2, 28, 15, 55
-   :header-rows: 1
+
+    1,"sanithhbasictrgtyr = 12, shift years = 6",FS_ALB_2030,Full access to at least basic sanitation services in 2030
+    2,"sanithhbasictrgtyr = 32, shift years = 6",FS_ALB_2050,Full access to at least basic sanitation services in 2050
+    3,"sanithhsafetrgtyr = 12, shift years = 6",FS_SM_2030,Full access to safely managed sanitation services in 2030
+    4,"sanithhsafetrgtyr = 32, shift years = 6",FS_SM_2050,Full access to safely managed sanitation services in 2050
+    5,"waterhhbasictrgtyr = 12, shift years = 6",FW_ALB_2030,Full access to at least basic water services in 2030
+    6,"waterhhbasictrgtyr = 32, shift years = 6",FW_ALB_2050,Full access to at least basic water services in 2050
+    7,"waterhhsafetrgtyr = 12, shift years = 6",FW_SM_2030,Full access to safely managed water services in 2030
+    8,"waterhhsafetrgtyr = 32, shift years = 6",FW_SM_2050,Full access to safely managed water services in 2050
+    9,"(waterhhbasictrgtyr = 12, shift years = 6) & (sanithhbasictrgtyr = 12, shift years = 6)",FWS_ALB_2030,Full access to at least basic water & sanitation services in 2030
+    10,"(waterhhbasictrgtyr = 32, shift years = 6) & (sanithhbasictrgtyr = 32, shift years = 6)",FWS_ALB_2050,Full access to at least basic water & sanitation services in 2050
+    11,"(waterhhsafetrgtyr = 12, shift years = 6) & (sanithhsafetrgtyr = 12, shift years = 6)",FWS_SM_2030,Full access to safely managed water & sanitation services in 2030
+    12,"(waterhhsafetrgtyr = 32, shift years = 6) & (sanithhsafetrgtyr = 32, shift years = 6)",FWS_SM_2050,Full access to safely managed water & sanitation services in 2050
 
 .. csv-table:: Scenarios for decreasing/increasing water and sanitation in 2030 and 2050
-   :file: _static/csv/2-scenario-for-decreasing-increasing-water-and-sanitation-in-2030-and-2050.csv
+   :header: "N°", "Scenario (parameter)", "Code", "Description"
    :widths: 2, 28, 15, 55
-   :header-rows: 1
+
+    13,"sanithhm = 0.5, basic, total, shift years = 6",SI_BS_0_5x,Increase basic sanitation services by factor 0.5
+    14,"sanithhm = 2, basic, total, shift years = 6",SI_BS_2x,Increase basic sanitation services by factor 2
+    15,"sanithhm = 4, basic, total, shift years = 6",SI_BS_4x,Increase basic sanitation services by factor 4
+    16,"sanithhm = 6, basic, total, shift years = 6",SI_BS_6x,Increase basic sanitation services by factor 6
+    17,"sanithhm = 0.5, safely managed, total, shift years = 6",SI_SM_0_5x,Increase safely managed sanitation services by factor 0.5
+    18,"sanithhm = 2, safely managed, total, shift years = 6",SI_SM_2x,Increase safely managed sanitation services by factor 2
+    19,"sanithhm = 4, safely managed, total, shift years = 6",SI_SM_4x,Increase safely managed sanitation services by factor 4
+    20,"sanithhm = 6, safely managed, total, shift years = 6",SI_SM_6x,Increase safely managed sanitation services by factor 6
+    21,"waterhhm = 0.5, basic, total, shift years = 6",WI_BS_0_5x,Increase basic water services by factor 0.5
+    22,"waterhhm = 2, basic, total, shift years = 6",WI_BS_2x,Increase basic water services by factor 2
+    23,"waterhhm = 4, basic, total, shift years = 6",WI_BS_4x,Increase basic sanitation services by factor 4
+    24,"waterhhm = 6, basic, total, shift years = 6",WI_BS_6x,Increase basic water services by factor 6
+    25,"waterhhm = 0.5, safely managed, total, shift years = 6",WI_SM_0_5x,Increase safely managed water services by factor 0.5
+    26,"waterhhm = 2, safely managed, total, shift years = 6",WI_SM_2x,Increase safely managed water services by factor 2
+    27,"waterhhm = 4, safely managed, total, shift years = 6",WI_SM_4x,Increase safely managed water services by factor 4
+    28,"waterhhm = 6, safely managed, total, shift years = 6",WI_SM_6x,Increase safely managed water services by factor 6
+    29,"(waterhhm = 0.5, basic, total, shift years = 6) & (sanithhm = 0.5, basic, total, shift years = 6)",WSI_BS_0_5x,Increase basic water & sanitation services by factor 0.5
+    30,"(waterhhm = 2, basic, total, shift years = 6) & (sanithhm = 2, basic, total, shift years = 6)",WSI_BS_2x,Increase basic water & sanitation services by factor 2
+    31,"(waterhhm = 4, basic, total, shift years = 6) & (sanithhm = 4, basic, total, shift years = 6)",WSI_BS_4x,Increase basic water & sanitation services by factor 4
+    32,"(waterhhm = 6, basic, total, shift years = 6) & (sanithhm = 6, basic, total, shift years = 6)",WSI_BS_6x,Increase basic water water & services by factor 6
+    33,"(waterhhm = 0.5, safely managed, total, shift years = 6) & (sanithhm = 0.5, safely managed, total, shift years = 6)",WSI_SM_0_5x,Increase safely managed water & sanitation services by factor 0.5
+    34,"(waterhhm = 2, safely managed, total, shift years = 6) & (sanithhm = 2, safely managed, total, shift years = 6)",WSI_SM_2x,Increase safely managed water & sanitation services by factor 2
+    35,"(waterhhm = 4, safely managed, total, shift years = 6) & (sanithhm = 4, safely managed, total, shift years = 6)",WSI_SM_4x,Increase safely managed water & sanitation services by factor 4
+    36,"(waterhhm = 6, safely managed, total, shift years = 6) & (sanithhm = 6, safely managed, total, shift years = 6)",WSI_SM_6x,Increase safely managed water & sanitation services by factor 6
 
 
 Step 2: Batch Run All Scenario Files
