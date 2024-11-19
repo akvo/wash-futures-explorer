@@ -42,6 +42,16 @@ A scenario file is a text file (with extension .sce) that describes the scenario
 .. note::
    High-priority countries include: Dem. Republic of the Congo, Ethiopia, Ghana, Guatemala, Haiti, India, Indonesia, Kenya, Liberia, Madagascar, Malawi, Mali, Mozambique, Nepal, Nigeria, Philippines, Rwanda, Senegal, Sudan South, Tanzania, Uganda, Zambia.
 
+.. csv-table:: Scenario of reaching water and sanitation in 2030 and 2050
+   :file: _static/csv/1-scenario-of-reaching-water-and-sanitation-in-2030-and-2050.csv
+   :widths: 2, 28, 15, 55
+   :header-rows: 1
+
+.. csv-table:: Scenarios for decreasing/increasing water and sanitation in 2030 and 2050
+   :file: _static/csv/2-scenario-for-decreasing-increasing-water-and-sanitation-in-2030-and-2050.csv
+   :widths: 2, 28, 15, 55
+   :header-rows: 1
+
 
 Step 2: Batch Run All Scenario Files
 ************************************
