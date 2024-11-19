@@ -121,7 +121,8 @@ In order  to generate a scenario file (for example **sanithhbasictrgtyr = 12, sh
    #. Click **Load**.
 
 #. Select **World** then **Total** in the box with the header **Please pick a dimension from the dropdown**.
-In the window that appears, follow these 3 steps:
+
+   In the window that appears, follow these 3 steps:
 
    #. Enter the parameter value.
 
