@@ -165,7 +165,7 @@ def map_country_name(country):
 # In[13]:
 
 
-final_columns = ['indicator','year','country','unit','value_name','jmp_category','commitment','value','base_value','initial_value','2030','2050']
+final_columns = ['indicator','year','country','unit','value_name','jmp_category','commitment','value','base_value','initial_value','cumulative_value','2030','2050']
 
 
 # In[14]:
@@ -283,7 +283,7 @@ def remove_unmatches_jmp_category(x):
         if x["2nd_dimension"] == "SafelyManaged" and x["jmp_category"] == "ALB":
             return True
         if x["2nd_dimension"] == "SafelyManaged" and x["jmp_category"] == "BS":
-            return True
+            return "Base"
     return False
 
 
@@ -441,7 +441,7 @@ for file in files:
             "value": value_list["value"]
         })
     df = pd.DataFrame(new_data)
-    df = filter_dataframe_by_year(df, file)
+
     df_split = pd.DataFrame(df['value_type'].tolist(), index=df.index)
     df_split.columns = ['value_name', 'jmp_category', 'commitment']
     df_final = pd.concat([df, df_split], axis=1)
@@ -449,8 +449,20 @@ for file in files:
     df_final['indicator'] = get_ifs_name(file)
     df_final['jmp_category'] = df_final.apply(base_jmp_category, axis=1)
     df_final['jmp_category'] = df_final['jmp_category'].replace({"BS": "ALB"})
-    
+
     df_final['commitment'] = df_final.apply(modify_commitment_name, axis=1)
+
+    # Make sure that all value is numeric
+    df_final['value'] = pd.to_numeric(df_final['value'], errors='coerce')
+    df_final['value'] = df_final['value'].fillna(0)
+
+    # Add cumulative column grouped by multiple columns
+    df_final.to_csv("../tests/original_data.csv", index=False)
+    group_columns = ['country', 'jmp_category', 'commitment', 'indicator', 'value_name']
+    df_final['cumulative_value'] = df_final.groupby(group_columns)['value'].cumsum()
+    df_final['jmp_category'] = df_final['jmp_category'].replace('Base', np.nan)
+
+    df_final = filter_dataframe_by_year(df_final, file)
     # df_final.to_csv("testing-1.csv",index=False)
     # Add Value for ALB
     if "Water Service" in file or "Sanitation Service" in file:
