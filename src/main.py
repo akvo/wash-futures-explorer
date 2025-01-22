@@ -451,6 +451,8 @@ for file in files:
     df_final['jmp_category'] = df_final['jmp_category'].replace({"BS": "ALB"})
 
     df_final['commitment'] = df_final.apply(modify_commitment_name, axis=1)
+    # Add Missing Base Category
+    df_final['jmp_category'] = df_final['jmp_category'].fillna("Base")
 
     # Make sure that all value is numeric
     df_final['value'] = pd.to_numeric(df_final['value'], errors='coerce')
@@ -458,8 +460,13 @@ for file in files:
 
     # Add cumulative column grouped by multiple columns
     df_final.to_csv("../tests/original_data.csv", index=False)
+    # Exclude rows with year to cumulative == 2019
+    excluded_cumulative = df_final[df_final['year'] == 2019]
+    df_final = df_final[df_final['year'] != 2019]
     group_columns = ['country', 'jmp_category', 'commitment', 'indicator', 'value_name']
     df_final['cumulative_value'] = df_final.groupby(group_columns)['value'].cumsum()
+
+    df_final = pd.concat([df_final, excluded_cumulative]).sort_values(by='year').reset_index(drop=True)
     df_final['jmp_category'] = df_final['jmp_category'].replace('Base', np.nan)
 
     df_final = filter_dataframe_by_year(df_final, file)
@@ -473,7 +480,7 @@ for file in files:
             df_final['value'] = df_final.apply(lambda x: get_alb_value(x, df_final), axis=1)
 
     # Remove ALB From SafelyManaged
-    df_final['remove'] = df_final.apply(remove_unmatches_jmp_category, axis=1) 
+    df_final['remove'] = df_final.apply(remove_unmatches_jmp_category, axis=1)
     df_final = df_final[df_final['remove'] == False].reset_index(drop=True)
     # End Remove
 
