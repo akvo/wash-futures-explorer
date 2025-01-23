@@ -416,6 +416,8 @@ def populate_data():
 
 
 combined_df = pd.DataFrame(columns=final_columns)
+original_data_columns = ["year","country","value_type","value_name","jmp_category","commitment","value","cumulative_value","indicator"]
+original_data = pd.DataFrame(columns=original_data_columns)
 for file in files:
     # test only 1 file
     #if file != "../input_data/IFs/17. Water Services, Access, percent of population (2nd Dimensions = Basic + Safely Managed).csv":
@@ -441,6 +443,7 @@ for file in files:
             "value": value_list["value"]
         })
     df = pd.DataFrame(new_data)
+    df = df[df["year"] > 2018]
 
     df_split = pd.DataFrame(df['value_type'].tolist(), index=df.index)
     df_split.columns = ['value_name', 'jmp_category', 'commitment']
@@ -458,18 +461,6 @@ for file in files:
     df_final['value'] = pd.to_numeric(df_final['value'], errors='coerce')
     df_final['value'] = df_final['value'].fillna(0)
 
-    # Add cumulative column grouped by multiple columns
-    df_final.to_csv("../tests/original_data.csv", index=False)
-    # Exclude rows with year to cumulative == 2019
-    excluded_cumulative = df_final[df_final['year'] == 2019]
-    df_final = df_final[df_final['year'] != 2019]
-    group_columns = ['country', 'jmp_category', 'commitment', 'indicator', 'value_name']
-    df_final['cumulative_value'] = df_final.groupby(group_columns)['value'].cumsum()
-
-    df_final = pd.concat([df_final, excluded_cumulative]).sort_values(by='year').reset_index(drop=True)
-    df_final['jmp_category'] = df_final['jmp_category'].replace('Base', np.nan)
-
-    df_final = filter_dataframe_by_year(df_final, file)
     # df_final.to_csv("testing-1.csv",index=False)
     # Add Value for ALB
     if "Water Service" in file or "Sanitation Service" in file:
@@ -480,9 +471,24 @@ for file in files:
             df_final['value'] = df_final.apply(lambda x: get_alb_value(x, df_final), axis=1)
 
     # Remove ALB From SafelyManaged
-    df_final['remove'] = df_final.apply(remove_unmatches_jmp_category, axis=1)
+    df_final['remove'] = df_final.apply(remove_unmatches_jmp_category, axis=1) 
     df_final = df_final[df_final['remove'] == False].reset_index(drop=True)
     # End Remove
+
+    # Add cumulative column grouped by multiple columns
+    # Exclude rows with year to cumulative == 2019
+    excluded_cumulative = df_final[df_final['year'] == 2019]
+    df_final = df_final[df_final['year'] != 2019]
+    group_columns = ['country', 'jmp_category', 'commitment', 'indicator', 'value_name']
+    df_final['cumulative_value'] = df_final.groupby(group_columns)['value'].cumsum()
+
+    # collect original data for checking
+    df_final = pd.concat([df_final, excluded_cumulative]).sort_values(by='year').reset_index(drop=True)
+    df_final['jmp_category'] = df_final['jmp_category'].replace('Base', np.nan)
+
+    # combine original data for testing
+    original_data = pd.concat([df_final[original_data_columns].dropna(axis=1, how='all'), original_data], ignore_index=True)
+    df_final = filter_dataframe_by_year(df_final, file)
 
     # Add initial value column
     df_final['initial_value'] = np.nan
@@ -503,6 +509,8 @@ for file in files:
         df_final['2050'] = df_final.apply(lambda x: float(x["value"]) if "2050" in x["commitment"] else np.nan, axis=1)
     df_final = df_final[final_columns]
     combined_df = pd.concat([combined_df.dropna(axis=1, how='all'), df_final], ignore_index=True)
+# save the original data to a file
+original_data.to_csv("../tests/original_data.csv", index=False)
 
 
 # In[29]:
