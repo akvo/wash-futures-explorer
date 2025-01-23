@@ -165,7 +165,7 @@ def map_country_name(country):
 # In[13]:
 
 
-final_columns = ['indicator','year','country','unit','value_name','jmp_category','commitment','value','base_value','initial_value','cumulative_value','2030','2050']
+final_columns = ['indicator','year','country','unit','value_name','jmp_category','commitment','value','base_value','initial_value','cumulative_value','base_cumulative_value','2030','2050']
 
 
 # In[14]:
@@ -326,7 +326,10 @@ def add_initial_value_for_wash(x, dataframe):
 # In[24]:
 
 
-def add_base_value(x, dataframe, is_wash_data=True):
+def add_base_value(x, dataframe, cumulative=False, is_wash_data=True):
+    base_column = "value"
+    if cumulative:
+        base_column = "cumulative_value"
     if x["value_name"] != "Base":
         if is_wash_data:
             value_of_base = list(dataframe[
@@ -336,7 +339,7 @@ def add_base_value(x, dataframe, is_wash_data=True):
                 (dataframe["year"] == x["year"]) &
                 (dataframe["value_name"] == "Base") &
                 (dataframe["2nd_dimension"] == x["2nd_dimension"])
-            ]['value'])
+            ][base_column])
             if len(value_of_base):
                 return value_of_base[0]
         else:
@@ -345,7 +348,7 @@ def add_base_value(x, dataframe, is_wash_data=True):
                 (dataframe["country"] == x["country"]) &
                 (dataframe["year"] == x["year"]) &
                 (dataframe["value_name"] == "Base")
-            ]['value'])
+            ][base_column])
             if len(value_of_base):
                 return value_of_base[0]
     return np.nan
@@ -464,7 +467,7 @@ for file in files:
     # df_final.to_csv("testing-1.csv",index=False)
     # Add Value for ALB
     if "Water Service" in file or "Sanitation Service" in file:
-        if "Expenditure, Capital, Billion" not in file:
+        if "Expenditure" not in file:
             # for n in df_final.to_dict("records"):
             #  if n["country"] == "Democratic Republic of the Congo":
             #      print(n)
@@ -493,14 +496,17 @@ for file in files:
     # Add initial value column
     df_final['initial_value'] = np.nan
     df_final['base_value'] = np.nan
+    df_final['base_cumulative_value'] = np.nan
     df_final['2030'] = np.nan
     df_final['2050'] = np.nan
     if "Water Service" in file or "Sanitation Service" in file: # Filter using the filename
         df_final['initial_value'] = df_final.apply(lambda x: add_initial_value_for_wash(x, df_final), axis=1)
         df_final['base_value'] = df_final.apply(lambda x: add_base_value(x, df_final), axis=1)
+        df_final['base_cumulative_value'] = df_final.apply(lambda x: add_base_value(x, df_final, cumulative = True), axis=1)
         print(f"[WASH] : {file}")
     else:
         df_final['base_value'] = df_final.apply(lambda x: add_base_value(x, df_final, is_wash_data = False), axis=1)
+        df_final['base_cumulative_value'] = df_final.apply(lambda x: add_base_value(x, df_final, cumulative = True, is_wash_data = False), axis=1)
         print(f"[OTHER]: {file}")
     if file.split("/")[3] not in year_filter_config["year_range"]["files"]:  # remove after get initial value (for non wash)
         df_final = df_final[df_final['year'] != 2019].reset_index(drop=True)
