@@ -8,18 +8,6 @@ This documentation will guide you through the various components of WASH Futures
 
 ---
 
-Getting Started
-===============
-
-To get started with WASH Futures Explorer, follow these steps:
-
-1. **Set up the environment**: Ensure that Python and PowerBI are installed. Refer to `configuration_guide.rst` for setup instructions.
-2. **Input Data**: Load the required data files as described in `data_input.rst`.
-3. **Run Data Transformations**: Process the data using Python scripts, following the instructions in `data_transformation.rst`.
-4. **Visualise in PowerBI**: Import the transformed data into PowerBI for visualisation, as outlined in `data_visualisation.rst`.
-
----
-
 Contents
 ========
 
@@ -31,7 +19,7 @@ Contents
    data_batch_processing
    data_transformation
    data_output
-   data_visualisation
+   data_import
 
 ---
 
