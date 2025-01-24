@@ -16,21 +16,23 @@ Dataset Location
 Below are the dataset files available in the repository, with links to their respective locations in Git LFS. These links can be used directly for importing data into PowerBI.
 
 Relational Data Files:
-1. `key_actual_commitment.csv`_: Relational data for actual commitments.
-2. `key_commitment.csv`_: Relational data for commitments.
-3. `key_country.csv`_: Relational data for countries.
-4. `key_indicator.csv`_: Relational data for indicators.
-5. `key_jmp_category.csv`_: Relational data for JMP categories.
-6. `key_jmp_name.csv`_: Relational data for JMP names.
-7. `key_unit.csv`_: Relational data for units.
-8. `key_value_name.csv`_: Relational data for value names.
-9. `key_value_type.csv`_: Relational data for value types.
+
+1. Relational data for actual commitments: `key_actual_commitment.csv`_
+2. Relational data for commitments: `key_commitment.csv`_
+3. Relational data for countries: `key_country.csv`_
+4. Relational data for indicators: `key_indicator.csv`_
+5. Relational data for JMP categories: `key_jmp_category.csv`_
+6. Relational data for JMP names: `key_jmp_name.csv`_
+7. Relational data for units: `key_unit.csv`_
+8. Relational data for value names: `key_value_name.csv`_
+9. Relational data for value types: `key_value_type.csv`_
 
 Value Data Files:
-1. `table_graph_ifs.csv`_: Value data for IFS graphs.
-2. `table_ifs.csv`_: Value data for IFS.
-3. `table_ifs_progress_rates.csv`_: Value data for IFS progress rates.
-4. `table_jmp.csv`_: Value data for JMP.
+
+1. Value data for IFS graphs: `table_graph_ifs.csv`_
+2. Value data for IFS: `table_ifs.csv`_
+3. Value data for IFS progress rates: `table_ifs_progress_rates.csv`_
+4. Value data for JMP: `table_jmp.csv`_
 
 .. _key_actual_commitment.csv: https://media.githubusercontent.com/media/akvo/wash-futures-explorer/refs/heads/main/output_data/key_actual_commitment.csv
 .. _key_commitment.csv: https://media.githubusercontent.com/media/akvo/wash-futures-explorer/refs/heads/main/output_data/key_commitment.csv
