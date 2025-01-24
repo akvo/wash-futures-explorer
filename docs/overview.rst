@@ -99,7 +99,7 @@ The main sustainability plan for this tool is its reproducibility, so if it is n
 
 Embedding the Tool Into USAID Systems
 -------------------------------------
-In order to publish PowerBI dashboards on the PowerBI online service, a PowerBI subscription is required. We believe that a PowerBI Pro subscription is sufficient. It is hosted on WSSH D&A prime’s account and shared on the WSSH D&A webpage on the USAID Global Waters website through an iframe, together with the user documentation and tutorial video. It will be maintained during the length of the program and for one year after the program ends.
+In order to publish PowerBI dashboards on the PowerBI online service, a PowerBI subscription is required. We believe that a PowerBI Pro subscription is sufficient. It is hosted on WSSH D&A prime’s account and shared on the WSSH D&A webpage on the USAID Global Waters website through an iframe, together with the user documentation and tutorial video. It will be maintained during the length of the program and for one year after the program ends. The dashboard will remain available in a static state one year after the end of the WSSH D&A activity, and all other materials will remain available via GlobalWaters and the USAID Development Clearinghouse (DEC).
 
 Talking Points, Capacity Building and Other Uses From The Mission
 -----------------------------------------------------------------
@@ -107,7 +107,7 @@ We anticipate that USAID Missions or USAID HQ might want some adaptation to the 
 
 Continuous improvement
 ----------------------
-A feedback form has been added to the tool and it is expected that we will gather feedback on a continuous basis.  We plan to run 1 to 2 updates a year once we agree on the priority in the feedback received. We anticipate that some re-running of the data will be needed in year 3 to update with latest model data and JMP data.
+A feedback form has been added to the tool and it is expected that we will gather feedback on a continuous basis. We plan to run 1 to 2 updates a year once we agree on the priority in the feedback received. We anticipate that some re-running of the data will be needed in year 3 to update with latest model data and JMP data.
 
 Licensing
 ---------
