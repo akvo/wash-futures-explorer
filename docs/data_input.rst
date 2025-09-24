@@ -7,11 +7,19 @@ Overview
 
 The data for **WASH Futures Explorer** is sourced from the **International Futures (IFs)** model, a free and open-source quantitative tool designed to help users think systematically about long-term global futures. Developed by the Frederick S. Pardee Center for International Futures, IFs is used by policymakers, researchers, and students worldwide to explore potential global trends, development goals, and targets. The IFs model offers insights into various indicators, including those relevant to water, sanitation, and hygiene (WASH) initiatives.
 
-For more information about the IFs model, visit the `Pardee Wiki page <https://korbel.du.edu/pardee/content/download-ifs>`_.
-
 .. image:: https://korbel.du.edu/sites/default/files/IFsOverviewChart.jpg
    :alt: International Futures (IFs) Overview Chart
    :align: center
+
+In the IFs model, WASH intervention scenarios refers to different policy interventions or changes in key drivers that users can input. These might include investments in infrastructure, policy reforms, or public health campaigns aimed at improving WASH services. Next, the model uses complex algorithms to simulate how these interventions would impact various indicators. This includes changes in access to water and sanitation, health outcomes (e.g., reduction in waterborne diseases), and overall quality of life. The model allows for the comparison of multiple scenarios side-by-side. Users can see how different levels of investment or policy changes might lead to different outcomes, helping policymakers understand the potential benefits and trade-offs.
+
+.. note::
+   For more information about the IFs model, visit the `Pardee Wiki page <https://korbel.du.edu/pardee/content/download-ifs>`_.
+
+.. image:: https://wash-futures-explorer.readthedocs.io/en/latest/_static/images/flow-chart-of-water-and-sanitation-model.png
+   :alt: Flow Chart of Water and Sanitation Model
+   :align: center
+
 
 Data Download
 =============
@@ -43,14 +51,16 @@ The following files are included in **WASH Futures Explorer** as primary data so
 - **Stunted Children (Million)**: `24. Stunted children, History and Forecast - Million.csv`
 - **Malnourished Children (Million)**: `26. Malnourished Children, Headcount - Millions.csv`
 
-Data Organization
+Data Organisation
 =================
 
-All data files are organized under the `input_data` directory as follows:
+All data files are organised under the `input_data` directory as follows:
 
 - **input_data/IFs**: Contains the IFs model data files listed above.
 - **input_data/JMP**: Contains additional data from the Joint Monitoring Programme (JMP), specifically the file `JMP-2023-world.xlsx`, which provides complementary information on WASH indicators.
 
 ---
 
-Refer to the `data_transformation.rst` section for details on how these data files are processed and prepared for visualization within **WASH Futures Explorer**.
+
+.. note::
+   Refer to the `data_transformation.rst` section for details on how these data files are processed and prepared for visualisation within **WASH Futures Explorer**.
