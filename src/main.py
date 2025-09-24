@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 import difflib
 import itertools
+import requests
 
 
 OUTPUT_DIR = "../output_data"
